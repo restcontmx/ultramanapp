@@ -1,0 +1,63 @@
+<h2>{{title}}</h2>
+<hr>
+<div class="row">
+    <div class="col-md-12" *ngIf="competition && competition.competition_type.value == 1">
+        <table class="table table-sm table-bordered table-hover table-responsive" >
+            <thead class="thead-inverse">
+                <tr>
+                    <th colspan="3"></th>
+                    <th colspan="3" class="table-info">Day 1</th>
+                    <th class="table-danger">Day 2</th>
+                    <th class="table-success">Day 3</th>
+                    <th colspan="4">Totals</th>
+                </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th class="table-info">
+                        Natación
+                    </th>
+                    <th class="table-info">
+                        Ciclismo
+                    </th>
+                    <th class="table-info">
+                        Total
+                    </th>
+                    <th class="table-danger">
+                        Ciclismo
+                    </th>
+                    <th class="table-success">
+                        Carrera
+                    </th>
+                    <th>
+                        <i class="fa fa-tint" aria-hidden="true"></i>
+                    </th>
+                    <th>
+                        <i class="fa fa-bicycle" aria-hidden="true"></i>
+                    </th>
+                    <th>
+                        <i class="fa fa-road" aria-hidden="true"></i>
+                    </th>
+                    <th>Global</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let reg of registrations">
+                    <td>{{reg.competitor_number}}</td>
+                    <td>{{reg.first_name}} {{reg.last_name}}</td>
+                    <td>{{reg.category.name}}</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                    <td>00:00:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

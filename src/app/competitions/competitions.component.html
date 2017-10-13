@@ -1,0 +1,13 @@
+<h2>{{title}}</h2>
+<hr>
+<div class="row">
+    <div class="col-md-2">
+        <div class="list-group">
+            <a [routerLink]="['/competitions']" class="list-group-item list-group-item-action"><i class="fa fa-list" aria-hidden="true"></i> &nbsp;List</a>
+            <a [routerLink]="['/competitions/new']" class="list-group-item list-group-item-action"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp; New</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+</div>

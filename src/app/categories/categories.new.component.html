@@ -1,0 +1,65 @@
+<form #categoryForm="ngForm" (ngSubmit)="add(categoryForm)">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input  type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Name"
+                        required autofocus ngModel>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input  type="text"
+                        class="form-control"
+                        name="description"
+                        placeholder="Description"
+                        required autofocus ngModel>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="age_1">Age 1</label>
+                <input  type="number"
+                        class="form-control"
+                        name="age_1"
+                        placeholder="Age 1"
+                        required autofocus ngModel> 
+            </div>         
+        </div>
+        
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="age_2">Age 2</label>
+                <input  type="number"
+                        class="form-control"
+                        name="age_2"
+                        placeholder="Age 2"
+                        required autofocus ngModel>
+            </div>         
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="age_2">Sex</label>
+                <select name="sex" class="form-control" required ngModel>
+                    <option value="0">MALE</option>
+                    <option value="1">FEMALE</option>
+                </select>
+            </div>         
+        </div>
+
+        <div class="col-md-6">
+            <button [routerLink]="['categories']" class="btn btn-block btn-default">Cancel</button>                
+        </div>
+
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>                
+        </div>
+    </div>
+</form>

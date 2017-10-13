@@ -1,0 +1,40 @@
+<h2>{{title}}</h2>
+<div class="row"  *ngIf="competition">
+    <div class="col-md-12">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/competitions/detail', competition._id]" href="">Go Back</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="saveRounds()">Save</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<br>
+<div class="row" *ngIf="registrations && rounds">
+    <div class="col-md-12">
+        <table class="table table-sm table-hover">
+            <thead>
+                <tr class="table-success">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th *ngFor="let i of rounds">{{i}}</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let reg of registrations">
+                    <td>{{reg.competitor_number}}</td>
+                    <td>{{reg.first_name}} {{reg.last_name}}</td>
+                    <td *ngFor="let round of reg.rounds; let i = index">
+                        <div contenteditable="true"
+                            [textContent]="reg.rounds[i].time"
+                            (input)="reg.rounds[i].time = $event.target.textContent"></div>
+                    </td>
+                    <td>{{reg.total}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

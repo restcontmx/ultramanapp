@@ -1,0 +1,111 @@
+<div class="row" *ngIf="competition">
+    <div class="col-md-12">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container text-center">
+                <h1 class="display-3">{{competition.name}}</h1>
+                <p class="lead">{{competition.description}}</p>
+                <p>Type : <span class="badge badge-pill badge-info">{{competition.competition_type.name}}</span> | Date : <span class="badge badge-pill badge-success">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>
+                <h4 *ngIf="!competition.isOn">Not Running</h4>
+                <h4 *ngIf="competition.isOn">On Course</h4>
+                <p>
+                    <button type="button" class="btn btn-warning" [routerLink]="['/competitions/edit', competition._id]">Edit</button>
+                    <button type="button" class="btn btn-primary" [routerLink]="['/competitions/registration', competition._id]">Register</button>
+                    <button type="button" class="btn btn-info" [routerLink]="['/competitions/results', competition._id]">Results</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>    
+    <div class="col-md-4">
+        <h3>Stages</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-danger">
+                    <th>Stage</th>
+                    <th>Checks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let s of competition.stages" [routerLink]="['/competitions/stage', competition._id, s._id ]">
+                    <td>{{s.name}}</td>
+                    <td>{{s.rounds}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-8">
+        <h3>Start Times</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-success">
+                    <th>Day</th>
+                    <th>State</th>                    
+                    <th>Time</th>
+                    <th>Custom Start</th>
+                    <th>Quick Start</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let st of competition.start_times; let i = index">
+                    <td>{{st.name}}</td>
+                    <td>{{st.state? 'ON' : 'OFF' }}</td>
+                    <td>
+                        <div contenteditable="true"
+                            [textContent]="competition.start_times[i].date"
+                            (input)="competition.start_times[i].date = $event.target.textContent">00:00:00</div>    
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-success" *ngIf="!st.state" (click)="start(st)" [disabled]="!st.active">Start</button>
+                        <button class="btn btn-sm btn-danger" *ngIf="st.state" (click)="stopSartTime(st)" >Stop</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-info" *ngIf="!st.state" (click)="quickStart(st)" [disabled]="!st.active">Start</button>
+                        <button class="btn btn-sm btn-danger" *ngIf="st.state" (click)="stopSartTime(st)" >Stop</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="col-md-12">
+        <h3>Competitors</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-info">
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Team</th>
+                    <th>Category</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let registration of registrations">
+                    <td>{{registration.competitor_number}}</td>
+                    <td>{{registration.first_name}} {{registration.last_name}}</td>
+                    <td>{{registration.team}}</td>
+                    <td>{{registration.category.name}}</td>
+                    <td>{{registration.age}}</td>
+                    <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>
+                    <td>
+                        <a href="" [routerLink]="['/registration/detail/', registration._id ]">
+                            <button class="btn btn-block btn-warning">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                        <a (click)="delete( registration._id )">
+                            <button class="btn btn-block btn-danger">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<h2>{{title}}</h2>
+
+<hr>
+<table class="table table-inverse">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Age 1</th>
+            <th>Age 2</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of categories">
+            <td><a [routerLink]="['/categories/detail/', category._id ]">{{category.name}}</a></td>
+            <td>{{category.description}}</td>
+            <td>{{category.age_1}}</td>
+            <td>{{category.age_2}}</td>
+            <td><a [routerLink]="['/categories/detail/', category._id ]"><button class="btn btn-block btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a></td>
+            <td><a [routerLink]="['/categories/detail/', category._id ]"><button class="btn btn-block btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></a></td>
+        </tr>
+    </tbody>
+</table>

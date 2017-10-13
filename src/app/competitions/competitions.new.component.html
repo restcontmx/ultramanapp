@@ -1,0 +1,49 @@
+<form #competitionForm="ngForm" (ngSubmit)="add(competitionForm)">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input  type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Name"
+                        required autofocus ngModel>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input  type="text"
+                        class="form-control"
+                        name="description"
+                        placeholder="Description"
+                        required autofocus ngModel>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="start_date">Start Date</label>
+                <owl-date-time class="form-control" name="start_date" required autofocus ngModel></owl-date-time>   
+            </div>         
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="competition_type">Competition Type</label>
+                <select name="competition_type" class="form-control" required ngModel>
+                    <option *ngFor="let t of competition_types" [ngValue]="t">{{t.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <button [routerLink]="['/competitions']" class="btn btn-block btn-default">Cancel</button>                
+        </div>
+
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>                
+        </div>
+    </div>
+</form>
