@@ -1,4 +1,9 @@
 <div class="row" *ngIf="competition">
+    <div class="col-md-12" *ngIf="errors">
+        <div class="alert alert-danger" role="alert">
+            {{errors}}
+        </div>
+    </div>
     <div class="col-md-12">
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container text-center">

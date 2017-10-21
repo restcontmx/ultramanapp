@@ -1,8 +1,8 @@
 <h2>{{title}}</h2>
 <hr>
 <div class="row">
-    <div class="col-md-12" *ngIf="competition && competition.competition_type.value == 1">
-        <table class="table table-sm table-bordered table-hover table-responsive" >
+    <div class="col-md-12" *ngIf="competition && competition.competition_type.value == 1 && calc_done">
+        <table class="table table-sm table-bordered table-responsive">
             <thead class="thead-inverse">
                 <tr>
                     <th colspan="3"></th>
@@ -47,15 +47,15 @@
                     <td>{{reg.competitor_number}}</td>
                     <td>{{reg.first_name}} {{reg.last_name}}</td>
                     <td>{{reg.category.name}}</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
-                    <td>00:00:00</td>
+                    <td>{{reg.totals[0]}}</td>
+                    <td>{{reg.totals[1]}}</td>
+                    <td>{{reg.total_day_1}}</td>
+                    <td>{{reg.totals[2]}}</td>
+                    <td>{{reg.totals[3]}}</td>
+                    <td>{{reg.totals[0]}}</td>
+                    <td>{{reg.total_cycling}}</td>
+                    <td>{{reg.totals[3]}}</td>
+                    <td>{{reg.total}}</td>
                 </tr>
             </tbody>
         </table>

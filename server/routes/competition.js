@@ -219,10 +219,8 @@ router.put( '/starttimes', jsonParser, function( req, res ) {
     }
     let competition = req.body
     competition.start_times.forEach( st => {
-        console.log( st )
         StartTime.findByIdAndUpdate( st._id, { date : st.date, state : st.state }, function( err, start_time ) {
             if( !err ) {
-                console.log( start_time )
             }
         })
     });

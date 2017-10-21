@@ -85,29 +85,31 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__auth_dashboard_component__ = __webpack_require__("../../../../../src/app/auth/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__menu_navbar_component__ = __webpack_require__("../../../../../src/app/menu/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__menu_sidebar_component__ = __webpack_require__("../../../../../src/app/menu/sidebar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__auth_login_component__ = __webpack_require__("../../../../../src/app/auth/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__auth_alwaysonwarth_service__ = __webpack_require__("../../../../../src/app/auth/alwaysonwarth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__competitions_competition_service__ = __webpack_require__("../../../../../src/app/competitions/competition.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__competitions_competitions_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_list_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_new_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.new.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_detail_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__competitions_competition_registration_component__ = __webpack_require__("../../../../../src/app/competitions/competition.registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__competitions_competitions_results_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.results.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_stage_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.stage.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__categories_category_service__ = __webpack_require__("../../../../../src/app/categories/category.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__categories_categories_component__ = __webpack_require__("../../../../../src/app/categories/categories.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__categories_categories_list_component__ = __webpack_require__("../../../../../src/app/categories/categories.list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__categories_categories_new_component__ = __webpack_require__("../../../../../src/app/categories/categories.new.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__competition_types_competition_types_service__ = __webpack_require__("../../../../../src/app/competition_types/competition_types.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__competitions_registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng_pick_datetime__ = __webpack_require__("../../../../ng-pick-datetime/picker.module.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng_pick_datetime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_27_ng_pick_datetime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__auth_main_component__ = __webpack_require__("../../../../../src/app/auth/main.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__menu_navbar_component__ = __webpack_require__("../../../../../src/app/menu/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__menu_sidebar_component__ = __webpack_require__("../../../../../src/app/menu/sidebar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__auth_login_component__ = __webpack_require__("../../../../../src/app/auth/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_alwaysonwarth_service__ = __webpack_require__("../../../../../src/app/auth/alwaysonwarth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__competitions_competition_service__ = __webpack_require__("../../../../../src/app/competitions/competition.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_list_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_new_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.new.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__competitions_competition_registration_component__ = __webpack_require__("../../../../../src/app/competitions/competition.registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_results_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.results.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__competitions_competitions_stage_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.stage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__categories_category_service__ = __webpack_require__("../../../../../src/app/categories/category.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__categories_categories_component__ = __webpack_require__("../../../../../src/app/categories/categories.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__categories_categories_list_component__ = __webpack_require__("../../../../../src/app/categories/categories.list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__categories_categories_new_component__ = __webpack_require__("../../../../../src/app/categories/categories.new.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__competition_types_competition_types_service__ = __webpack_require__("../../../../../src/app/competition_types/competition_types.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__competitions_registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__start_times_starttime_service__ = __webpack_require__("../../../../../src/app/start_times/starttime.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime__ = __webpack_require__("../../../../ng-pick-datetime/picker.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -143,32 +145,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var appRoutes = [
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_9__auth_login_component__["a" /* LoginComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__auth_login_component__["a" /* LoginComponent */] },
     {
         path: '', component: __WEBPACK_IMPORTED_MODULE_6__auth_dashboard_component__["a" /* DashboardComponent */],
-        canActivate: [__WEBPACK_IMPORTED_MODULE_10__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */]],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */]],
         children: [
             {
+                path: '',
+                component: __WEBPACK_IMPORTED_MODULE_7__auth_main_component__["a" /* MainComponent */]
+            },
+            {
                 path: 'competitions',
-                component: __WEBPACK_IMPORTED_MODULE_13__competitions_competitions_component__["a" /* CompetitionsComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_component__["a" /* CompetitionsComponent */],
                 children: [
-                    { path: '', component: __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_list_component__["a" /* CompetitionsListComponent */] },
-                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */] },
-                    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
-                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
-                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
-                    { path: 'registration/:id', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */] },
-                    { path: 'results/:id', component: __WEBPACK_IMPORTED_MODULE_18__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */] },
-                    { path: 'stage/:id/:stageId', component: __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */] }
+                    { path: '', component: __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_list_component__["a" /* CompetitionsListComponent */] },
+                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */] },
+                    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
+                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
+                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
+                    { path: 'registration/:id', component: __WEBPACK_IMPORTED_MODULE_18__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */] },
+                    { path: 'results/:id', component: __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */] },
+                    { path: 'stage/:id/:stageId', component: __WEBPACK_IMPORTED_MODULE_20__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */] }
                 ]
             },
             {
                 path: 'categories',
-                component: __WEBPACK_IMPORTED_MODULE_21__categories_categories_component__["a" /* CategoriesComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_22__categories_categories_component__["a" /* CategoriesComponent */],
                 children: [
-                    { path: '', component: __WEBPACK_IMPORTED_MODULE_22__categories_categories_list_component__["a" /* CategoriesListComponent */] },
-                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_23__categories_categories_new_component__["a" /* CategoriesNewComponent */] }
+                    { path: '', component: __WEBPACK_IMPORTED_MODULE_23__categories_categories_list_component__["a" /* CategoriesListComponent */] },
+                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_24__categories_categories_new_component__["a" /* CategoriesNewComponent */] }
                 ]
             },
         ]
@@ -184,38 +192,40 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__menu_navbar_component__["a" /* NavBarComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__menu_sidebar_component__["a" /* SideBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__menu_navbar_component__["a" /* NavBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__menu_sidebar_component__["a" /* SideBarComponent */],
             __WEBPACK_IMPORTED_MODULE_6__auth_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__auth_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__competitions_competitions_component__["a" /* CompetitionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_list_component__["a" /* CompetitionsListComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__categories_categories_component__["a" /* CategoriesComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__categories_categories_list_component__["a" /* CategoriesListComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__categories_categories_new_component__["a" /* CategoriesNewComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__auth_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_component__["a" /* CompetitionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_list_component__["a" /* CompetitionsListComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__categories_categories_component__["a" /* CategoriesComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__categories_categories_list_component__["a" /* CategoriesListComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__categories_categories_new_component__["a" /* CategoriesNewComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__auth_main_component__["a" /* MainComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_26__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: false } // <-- debugging purposes only
+            __WEBPACK_IMPORTED_MODULE_28__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: false } // <-- debugging purposes only
             ),
-            __WEBPACK_IMPORTED_MODULE_28__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_30__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
-            __WEBPACK_IMPORTED_MODULE_27_ng_pick_datetime__["DateTimePickerModule"]
+            __WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime__["DateTimePickerModule"]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_11__auth_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_12__auth_auth_service__["a" /* AuthService */],
             __WEBPACK_IMPORTED_MODULE_3_ngx_cookie_service__["a" /* CookieService */],
-            __WEBPACK_IMPORTED_MODULE_10__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_12__competitions_competition_service__["a" /* CompetitionService */],
-            __WEBPACK_IMPORTED_MODULE_24__competition_types_competition_types_service__["a" /* CompetitionTypeService */],
-            __WEBPACK_IMPORTED_MODULE_20__categories_category_service__["a" /* CategoryService */],
-            __WEBPACK_IMPORTED_MODULE_25__competitions_registration_service__["a" /* RegistrationService */]
+            __WEBPACK_IMPORTED_MODULE_11__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_13__competitions_competition_service__["a" /* CompetitionService */],
+            __WEBPACK_IMPORTED_MODULE_25__competition_types_competition_types_service__["a" /* CompetitionTypeService */],
+            __WEBPACK_IMPORTED_MODULE_21__categories_category_service__["a" /* CategoryService */],
+            __WEBPACK_IMPORTED_MODULE_26__competitions_registration_service__["a" /* RegistrationService */],
+            __WEBPACK_IMPORTED_MODULE_27__start_times_starttime_service__["a" /* StartTimeService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
@@ -411,7 +421,6 @@ var DashboardComponent = (function () {
     // @params none
     // @returns void
     DashboardComponent.prototype.ngOnInit = function () {
-        console.log("Is in dasboard");
     };
     return DashboardComponent;
 }());
@@ -520,6 +529,109 @@ LoginComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/main.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Welcome Ramiro Gutierrez Alaniz</h1>\n\n<div class=\"row\" *ngIf=\"competitions\">\n    <div class=\"col-md-12\" *ngFor=\"let competition of active_competitions\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4>On Course</h4>\n                <div class=\"row\">\n                    <div class=\"col-md-4\" *ngFor=\"let st of competition.start_times\"><h2 class=\"display-4\">{{st.display}}</h2></div>\n                </div>\n                <p>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\">Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/main.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__competitions_competition_service__ = __webpack_require__("../../../../../src/app/competitions/competition.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable__ = __webpack_require__("../../../../rxjs/observable/TimerObservable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__("../../../../moment/moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var MainComponent = (function () {
+    // Constructor function
+    // @param auth_service : authentication service
+    // @param router : router service
+    // @returns none
+    function MainComponent(auth_service, router, competition_service) {
+        this.auth_service = auth_service;
+        this.router = router;
+        this.competition_service = competition_service;
+    }
+    // Init function
+    // This will initialize the consturctor and validates login
+    // @params none
+    // @returns void
+    MainComponent.prototype.ngOnInit = function () {
+        this.timer = __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable__["TimerObservable"].create(2000, 1000);
+        this.getCompetitions();
+    };
+    // Ng on destroy
+    // When view ends
+    // @params none
+    // @returns none
+    MainComponent.prototype.ngOnDestroy = function () {
+        this.subscription.unsubscribe();
+    };
+    MainComponent.prototype.getCompetitions = function () {
+        var _this = this;
+        this.competition_service.getAll()
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (!response.error) {
+                _this.competitions = response.data;
+                _this.active_competitions = _this.competitions.filter(function (c) { return c.isOn == true; });
+                var now_1 = __WEBPACK_IMPORTED_MODULE_5_moment__();
+                _this.active_competitions.forEach(function (ac) {
+                    ac.start_times.forEach(function (s) {
+                        s.difference = __WEBPACK_IMPORTED_MODULE_5_moment__["duration"](now_1.diff(__WEBPACK_IMPORTED_MODULE_5_moment__(s.date, "HH:mm:ss")));
+                        s.display = "00:00:00";
+                    });
+                });
+                _this.subscription = _this.timer.subscribe(function (t) {
+                    _this.active_competitions.forEach(function (ac) {
+                        ac.start_times.forEach(function (s) {
+                            if (s.state) {
+                                s.difference.add(1, 'seconds');
+                                s.display = s.difference.hours() + ':' + s.difference.minutes() + ':' + s.difference.seconds();
+                            }
+                        });
+                    });
+                });
+            }
+        });
+    };
+    return MainComponent;
+}());
+MainComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-main',
+        template: __webpack_require__("../../../../../src/app/auth/main.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__competitions_competition_service__["a" /* CompetitionService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__competitions_competition_service__["a" /* CompetitionService */]) === "function" && _c || Object])
+], MainComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=main.component.js.map
 
 /***/ }),
 
@@ -1154,7 +1266,7 @@ var _a;
 /***/ "../../../../../src/app/competitions/competitions.detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" *ngIf=\"competition\">\n    <div class=\"col-md-12\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4 *ngIf=\"!competition.isOn\">Not Running</h4>\n                <h4 *ngIf=\"competition.isOn\">On Course</h4>\n                <p>\n                    <button type=\"button\" class=\"btn btn-warning\" [routerLink]=\"['/competitions/edit', competition._id]\">Edit</button>\n                    <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/competitions/registration', competition._id]\">Register</button>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\">Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n    <hr>    \n    <div class=\"col-md-4\">\n        <h3>Stages</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-danger\">\n                    <th>Stage</th>\n                    <th>Checks</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let s of competition.stages\" [routerLink]=\"['/competitions/stage', competition._id, s._id ]\">\n                    <td>{{s.name}}</td>\n                    <td>{{s.rounds}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <div class=\"col-md-8\">\n        <h3>Start Times</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>Day</th>\n                    <th>State</th>                    \n                    <th>Time</th>\n                    <th>Custom Start</th>\n                    <th>Quick Start</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let st of competition.start_times; let i = index\">\n                    <td>{{st.name}}</td>\n                    <td>{{st.state? 'ON' : 'OFF' }}</td>\n                    <td>\n                        <div contenteditable=\"true\"\n                            [textContent]=\"competition.start_times[i].date\"\n                            (input)=\"competition.start_times[i].date = $event.target.textContent\">00:00:00</div>    \n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-success\" *ngIf=\"!st.state\" (click)=\"start(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-info\" *ngIf=\"!st.state\" (click)=\"quickStart(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <hr>\n    <div class=\"col-md-12\">\n        <h3>Competitors</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-info\">\n                    <th>No.</th>\n                    <th>Name</th>\n                    <th>Team</th>\n                    <th>Category</th>\n                    <th>Age</th>\n                    <th>Sex</th>\n                    <th>Edit</th>\n                    <th>Delete</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let registration of registrations\">\n                    <td>{{registration.competitor_number}}</td>\n                    <td>{{registration.first_name}} {{registration.last_name}}</td>\n                    <td>{{registration.team}}</td>\n                    <td>{{registration.category.name}}</td>\n                    <td>{{registration.age}}</td>\n                    <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>\n                    <td>\n                        <a href=\"\" [routerLink]=\"['/registration/detail/', registration._id ]\">\n                            <button class=\"btn btn-block btn-warning\">\n                                <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                    <td>\n                        <a (click)=\"delete( registration._id )\">\n                            <button class=\"btn btn-block btn-danger\">\n                                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<div class=\"row\" *ngIf=\"competition\">\n    <div class=\"col-md-12\" *ngIf=\"errors\">\n        <div class=\"alert alert-danger\" role=\"alert\">\n            {{errors}}\n        </div>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4 *ngIf=\"!competition.isOn\">Not Running</h4>\n                <h4 *ngIf=\"competition.isOn\">On Course</h4>\n                <p>\n                    <button type=\"button\" class=\"btn btn-warning\" [routerLink]=\"['/competitions/edit', competition._id]\">Edit</button>\n                    <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/competitions/registration', competition._id]\">Register</button>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\">Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n    <hr>    \n    <div class=\"col-md-4\">\n        <h3>Stages</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-danger\">\n                    <th>Stage</th>\n                    <th>Checks</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let s of competition.stages\" [routerLink]=\"['/competitions/stage', competition._id, s._id ]\">\n                    <td>{{s.name}}</td>\n                    <td>{{s.rounds}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <div class=\"col-md-8\">\n        <h3>Start Times</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>Day</th>\n                    <th>State</th>                    \n                    <th>Time</th>\n                    <th>Custom Start</th>\n                    <th>Quick Start</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let st of competition.start_times; let i = index\">\n                    <td>{{st.name}}</td>\n                    <td>{{st.state? 'ON' : 'OFF' }}</td>\n                    <td>\n                        <div contenteditable=\"true\"\n                            [textContent]=\"competition.start_times[i].date\"\n                            (input)=\"competition.start_times[i].date = $event.target.textContent\">00:00:00</div>    \n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-success\" *ngIf=\"!st.state\" (click)=\"start(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-info\" *ngIf=\"!st.state\" (click)=\"quickStart(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <hr>\n    <div class=\"col-md-12\">\n        <h3>Competitors</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-info\">\n                    <th>No.</th>\n                    <th>Name</th>\n                    <th>Team</th>\n                    <th>Category</th>\n                    <th>Age</th>\n                    <th>Sex</th>\n                    <th>Edit</th>\n                    <th>Delete</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let registration of registrations\">\n                    <td>{{registration.competitor_number}}</td>\n                    <td>{{registration.first_name}} {{registration.last_name}}</td>\n                    <td>{{registration.team}}</td>\n                    <td>{{registration.category.name}}</td>\n                    <td>{{registration.age}}</td>\n                    <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>\n                    <td>\n                        <a href=\"\" [routerLink]=\"['/registration/detail/', registration._id ]\">\n                            <button class=\"btn btn-block btn-warning\">\n                                <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                    <td>\n                        <a (click)=\"delete( registration._id )\">\n                            <button class=\"btn btn-block btn-danger\">\n                                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1243,19 +1355,34 @@ var CompetitionsDetailComponent = (function () {
     // @return none
     CompetitionsDetailComponent.prototype.start = function (start_time) {
         var _this = this;
-        start_time.state = true;
-        this.competition.isOn = true;
-        this.service.startTimesUpdate(this.competition)
-            .map(function (res) { return res.json(); })
-            .subscribe(function (response) {
-            if (response.error) {
-                console.log(response.message);
-            }
-            else {
-                _this.activeStartTime(start_time);
-                console.log("Updated");
-            }
+        if (this.validateTimes()) {
+            start_time.state = true;
+            this.competition.isOn = true;
+            this.service.startTimesUpdate(this.competition)
+                .map(function (res) { return res.json(); })
+                .subscribe(function (response) {
+                if (response.error) {
+                    _this.errors = response.message;
+                }
+                else {
+                    _this.activeStartTime(start_time);
+                    _this.errors = "";
+                }
+            });
+        }
+        else {
+            this.errors = "There was an error with the time formats; make sure they are hh:mm:ss format.";
+        }
+    };
+    // this shit will validate the times are in the right format
+    CompetitionsDetailComponent.prototype.validateTimes = function () {
+        var ret = true;
+        var regx_val = /\d{2}:\d{2}:\d{2}/;
+        this.competition.start_times.some(function (st) {
+            ret = regx_val.test(st.date);
+            return ret === false;
         });
+        return ret;
     };
     // quick start function
     // This will set the date just in the moment it was pressed
@@ -1388,7 +1515,7 @@ var CompetitionsListComponent = (function () {
             _this.tick = difference.hours() + ':' + difference.minutes() + ':' + difference.seconds();
         });
     };
-    // Ng on destroy
+    // Ng on destroy 
     // When view ends
     // @params none
     // @returns none
@@ -1557,7 +1684,7 @@ module.exports = "<form (ngSubmit)=\"register()\">\n        <div class=\"row\">\
 /***/ "../../../../../src/app/competitions/competitions.results.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-12\" *ngIf=\"competition && competition.competition_type.value == 1\">\n        <table class=\"table table-sm table-bordered table-hover table-responsive\" >\n            <thead class=\"thead-inverse\">\n                <tr>\n                    <th colspan=\"3\"></th>\n                    <th colspan=\"3\" class=\"table-info\">Day 1</th>\n                    <th class=\"table-danger\">Day 2</th>\n                    <th class=\"table-success\">Day 3</th>\n                    <th colspan=\"4\">Totals</th>\n                </tr>\n                <tr>\n                    <th>#</th>\n                    <th>Name</th>\n                    <th>Category</th>\n                    <th class=\"table-info\">\n                        Natación\n                    </th>\n                    <th class=\"table-info\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-info\">\n                        Total\n                    </th>\n                    <th class=\"table-danger\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-success\">\n                        Carrera\n                    </th>\n                    <th>\n                        <i class=\"fa fa-tint\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-bicycle\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-road\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>Global</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td>{{reg.category.name}}</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                    <td>00:00:00</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-12\" *ngIf=\"competition && competition.competition_type.value == 1 && calc_done\">\n        <table class=\"table table-sm table-bordered table-responsive\">\n            <thead class=\"thead-inverse\">\n                <tr>\n                    <th colspan=\"3\"></th>\n                    <th colspan=\"3\" class=\"table-info\">Day 1</th>\n                    <th class=\"table-danger\">Day 2</th>\n                    <th class=\"table-success\">Day 3</th>\n                    <th colspan=\"4\">Totals</th>\n                </tr>\n                <tr>\n                    <th>#</th>\n                    <th>Name</th>\n                    <th>Category</th>\n                    <th class=\"table-info\">\n                        Natación\n                    </th>\n                    <th class=\"table-info\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-info\">\n                        Total\n                    </th>\n                    <th class=\"table-danger\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-success\">\n                        Carrera\n                    </th>\n                    <th>\n                        <i class=\"fa fa-tint\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-bicycle\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-road\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>Global</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td>{{reg.category.name}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.totals[1]}}</td>\n                    <td>{{reg.total_day_1}}</td>\n                    <td>{{reg.totals[2]}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.total_cycling}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1570,6 +1697,8 @@ module.exports = "<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__competition_service__ = __webpack_require__("../../../../../src/app/competitions/competition.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment__ = __webpack_require__("../../../../moment/moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1583,6 +1712,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CompetitionsResultsComponent = (function () {
     // constructor
     // @params service: competition service
@@ -1592,6 +1722,7 @@ var CompetitionsResultsComponent = (function () {
         this.registration_service = registration_service;
         this.router = router;
         this.activated_route = activated_route;
+        this.calc_done = false;
         this.title = "Results";
     }
     // ng on init function
@@ -1638,6 +1769,16 @@ var CompetitionsResultsComponent = (function () {
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
             _this.registrations = response.data;
+            _this.calculateResults();
+            if (_this.competition.competition_type.value == 1) {
+                _this.registrations.forEach(function (reg) {
+                    // the cases of ultraman
+                    // Calculate day 1
+                    reg.total_day_1 = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](__WEBPACK_IMPORTED_MODULE_4_moment__["duration"](reg.totals[0]).asMilliseconds() + __WEBPACK_IMPORTED_MODULE_4_moment__["duration"](reg.totals[1]).asMilliseconds()).format("HH:mm:ss");
+                    // Calculate cycling
+                    reg.total_cycling = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](__WEBPACK_IMPORTED_MODULE_4_moment__["duration"](reg.totals[1]).asMilliseconds() + __WEBPACK_IMPORTED_MODULE_4_moment__["duration"](reg.totals[2]).asMilliseconds()).format("HH:mm:ss");
+                });
+            }
         });
     };
     CompetitionsResultsComponent.prototype.rangeOfStages = function (the_stages) {
@@ -1649,6 +1790,45 @@ var CompetitionsResultsComponent = (function () {
             }
         });
         return numbers;
+    };
+    // Calculate results
+    // @params none
+    // @returns none
+    CompetitionsResultsComponent.prototype.calculateResults = function () {
+        var _this = this;
+        this.registrations.forEach(function (reg) {
+            reg.totals = [];
+            _this.competition.stages.forEach(function (stage) {
+                var start_time = _this.competition.start_times.find(function (st) { return st._id == stage.start_time; });
+                var the_start_time = __WEBPACK_IMPORTED_MODULE_4_moment__(start_time.date, "HH:mm:ss");
+                var filtered_rounds = reg.rounds.filter(function (round) { return round.stage == stage._id && round.time != "00:00:00"; });
+                var last_round = filtered_rounds[filtered_rounds.length - 1];
+                if (last_round) {
+                    reg.totals.push(__WEBPACK_IMPORTED_MODULE_4_moment__["utc"](__WEBPACK_IMPORTED_MODULE_4_moment__(last_round.time, "HH:mm:ss").diff(the_start_time)).format("HH:mm:ss"));
+                }
+                else {
+                    reg.totals.push("00:00:00");
+                }
+            });
+            //reg.total = reg.totals.reduce( ( a, b ) => ( moment.utc( moment.duration( a ).add( moment.duration( b ) ).asMilliseconds() ).format( "HH:mm:ss" ) ), "00:00:00" )
+            reg.total = 0;
+            var start = true;
+            var start_day = 0;
+            reg.totals.forEach(function (total) {
+                //reg.total = moment.utc( moment.duration( reg.total ).add( moment.duration( total ) ).asMilliseconds() ).format( "HH:mm:ss" )
+                reg.total += __WEBPACK_IMPORTED_MODULE_4_moment__["duration"](total).asMilliseconds();
+                if (start) {
+                    start_day = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).days();
+                    start = false;
+                }
+            });
+            var m = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).minutes() < 10 ? '0' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).minutes() : __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).minutes();
+            var h = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).hours() < 10 ? '0' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).hours() : '' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).hours();
+            var s = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).seconds() < 10 ? '0' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).seconds() : __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).seconds();
+            console.log((parseInt(h) * (__WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).days() - start_day)) + ":" + m + ":" + s);
+            reg.total = (parseInt(h) + (24 * (__WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).days() - start_day))) + ":" + m + ":" + s;
+        });
+        this.calc_done = true;
     };
     return CompetitionsResultsComponent;
 }());
@@ -1668,7 +1848,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/competitions/competitions.stage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n<div class=\"row\"  *ngIf=\"competition\">\n    <div class=\"col-md-12\">\n        <ul class=\"nav justify-content-end\">\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/competitions/detail', competition._id]\" href=\"\">Go Back</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" (click)=\"saveRounds()\" href=\"\">Save</a>\n            </li>\n        </ul>\n    </div>\n</div>\n<br>\n<div class=\"row\" *ngIf=\"registrations && rounds\">\n    <div class=\"col-md-12\">\n        <table class=\"table table-sm table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>#</th>\n                    <th>Name</th>\n                    <th *ngFor=\"let i of rounds\">{{i}}</th>\n                    <th>Total</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td *ngFor=\"let round of reg.rounds; let i = index\">\n                        <div contenteditable=\"true\"\n                            [textContent]=\"reg.rounds[i].time\"\n                            (input)=\"reg.rounds[i].time = $event.target.textContent\"></div>\n                    </td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<h2>{{title}}</h2>\n<div class=\"row\"  *ngIf=\"competition\">\n    <div class=\"col-md-12\">\n        <ul class=\"nav justify-content-end\">\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/competitions/detail', competition._id]\" href=\"\">Go Back</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" (click)=\"saveRounds()\" href=\"javascript:void(0)\">Save</a>\n            </li>\n        </ul>\n    </div>\n</div>\n<br>\n<div class=\"row\" *ngIf=\"registrations && rounds\">\n    <div class=\"col-md-12\">\n        <table class=\"table table-sm table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>#</th>\n                    <th>Name</th>\n                    <th *ngFor=\"let i of rounds\">{{i}}</th>\n                    <th>Total</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td *ngFor=\"let round of reg.rounds; let i = index\">\n                        <div contenteditable=\"true\"\n                            [textContent]=\"reg.rounds[i].time\"\n                            (input)=\"reg.rounds[i].time = $event.target.textContent\"></div>\n                    </td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1680,7 +1860,10 @@ module.exports = "<h2>{{title}}</h2>\n<div class=\"row\"  *ngIf=\"competition\">
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__competition_service__ = __webpack_require__("../../../../../src/app/competitions/competition.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__start_times_starttime_service__ = __webpack_require__("../../../../../src/app/start_times/starttime.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__("../../../../moment/moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1694,13 +1877,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var CompetitionsStageComponent = (function () {
     // constructor
     // @params service: competition service
     // @returns none
-    function CompetitionsStageComponent(service, registration_service, router, activated_route) {
+    function CompetitionsStageComponent(service, registration_service, start_time_service, router, activated_route) {
         this.service = service;
         this.registration_service = registration_service;
+        this.start_time_service = start_time_service;
         this.router = router;
         this.activated_route = activated_route;
         this.rounds = [];
@@ -1715,7 +1901,6 @@ var CompetitionsStageComponent = (function () {
             var id = params['id'];
             _this.stage_id = params['stageId'];
             _this.getCompetition(id, _this.stage_id);
-            _this.getAllRegistrations(id);
         });
     };
     // Ng on destroy
@@ -1743,31 +1928,73 @@ var CompetitionsStageComponent = (function () {
                 for (var i = 0; i < _this.stage.rounds; i++) {
                     _this.rounds.push(i + 1);
                 }
+                _this.getStartTime(_this.stage.start_time);
+            }
+        });
+    };
+    // This is because of shit on the backend
+    // @param id
+    // @returns none
+    CompetitionsStageComponent.prototype.getStartTime = function (id) {
+        var _this = this;
+        this.start_time_service.detail(id)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (response.error) {
+                console.log(response.message);
+            }
+            else {
+                _this.start_time = response.data;
+                _this.getAllRegistrations();
             }
         });
     };
     // Gets all competitions from the service
     // @params none
     // @returns none
-    CompetitionsStageComponent.prototype.getAllRegistrations = function (id) {
+    CompetitionsStageComponent.prototype.getAllRegistrations = function () {
         var _this = this;
-        this.registration_service.getAllByCompetitionId(id)
+        this.registration_service.getAllByCompetitionId(this.competition._id)
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
-            _this.registrations = response.data;
-            _this.registrations.forEach(function (r) {
-                r.rounds = r.rounds.filter(function (round) { return round.stage == _this.stage_id; });
-            });
+            if (!response.error) {
+                _this.registrations = response.data;
+                _this.calculateResults();
+            }
+            else {
+                console.log("There was an error getting the results.");
+            }
         });
     };
     // Saves all the registration rounds
     // @params none
     // @returns none
     CompetitionsStageComponent.prototype.saveRounds = function () {
+        var _this = this;
         this.registration_service.saveRounds(this.registrations)
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
             console.log("This was saved on registration; Server says " + response.message + ".");
+            _this.calculateResults();
+        });
+    };
+    // calculate results
+    // this will calculate the results total of each result
+    // @params none
+    // @returns none
+    CompetitionsStageComponent.prototype.calculateResults = function () {
+        var _this = this;
+        var the_start_time = __WEBPACK_IMPORTED_MODULE_5_moment__(this.start_time.date, 'HH:mm:ss');
+        this.registrations.forEach(function (r) {
+            r.rounds = r.rounds.filter(function (round) { return round.stage == _this.stage_id; });
+            var filtered_rounds = r.rounds.filter(function (round) { return round.time != "00:00:00"; });
+            var last_round = filtered_rounds[filtered_rounds.length - 1];
+            if (last_round) {
+                r.total = __WEBPACK_IMPORTED_MODULE_5_moment__["utc"](__WEBPACK_IMPORTED_MODULE_5_moment__(last_round.time, "HH:mm:ss").diff(the_start_time)).format("HH:mm:ss");
+            }
+            else {
+                r.total = "00:00:00";
+            }
         });
     };
     return CompetitionsStageComponent;
@@ -1777,10 +2004,10 @@ CompetitionsStageComponent = __decorate([
         selector: 'competitions-stage',
         template: __webpack_require__("../../../../../src/app/competitions/competitions.stage.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__competition_service__["a" /* CompetitionService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__competition_service__["a" /* CompetitionService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__registration_service__["a" /* RegistrationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__registration_service__["a" /* RegistrationService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__competition_service__["a" /* CompetitionService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__competition_service__["a" /* CompetitionService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__registration_service__["a" /* RegistrationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__registration_service__["a" /* RegistrationService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__start_times_starttime_service__["a" /* StartTimeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__start_times_starttime_service__["a" /* StartTimeService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */]) === "function" && _e || Object])
 ], CompetitionsStageComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=competitions.stage.component.js.map
 
 /***/ }),
@@ -2001,6 +2228,80 @@ SideBarComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=sidebar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/start_times/starttime.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StartTimeService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var StartTimeService = (function () {
+    // Constructor function
+    // @param http: http_service
+    // @returns none
+    function StartTimeService(http_service) {
+        this.http_service = http_service;
+    }
+    // Get all
+    // Get all start_times
+    // @params none
+    // @returns Observable response
+    StartTimeService.prototype.getAll = function () {
+        return this.http_service.get('/api/start_time');
+    };
+    // Add new compettition
+    // @params data : a start_time
+    // @returns Observable response
+    StartTimeService.prototype.add = function (data) {
+        return this.http_service.post('/api/start_time', data);
+    };
+    // Update object
+    // @params data : a start_time
+    // @returns Observable response
+    StartTimeService.prototype.update = function (data) {
+        return this.http_service.put("/api/start_time/" + data.id, data);
+    };
+    // find by id start_time
+    // @params id : number
+    // @returns Observable response
+    StartTimeService.prototype.detail = function (id) {
+        return this.http_service.get("/api/start_time/" + id);
+    };
+    // delete by id start_time
+    // @params id : number
+    // @returns Observable response
+    StartTimeService.prototype.delete = function (id) {
+        return this.http_service.delete("/api/start_time/" + id);
+    };
+    return StartTimeService;
+}());
+StartTimeService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], StartTimeService);
+
+var _a;
+//# sourceMappingURL=starttime.service.js.map
 
 /***/ }),
 

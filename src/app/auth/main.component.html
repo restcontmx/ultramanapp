@@ -1,0 +1,20 @@
+<h1>Welcome Ramiro Gutierrez Alaniz</h1>
+
+<div class="row" *ngIf="competitions">
+    <div class="col-md-12" *ngFor="let competition of active_competitions">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container text-center">
+                <h1 class="display-3">{{competition.name}}</h1>
+                <p class="lead">{{competition.description}}</p>
+                <p>Type : <span class="badge badge-pill badge-info">{{competition.competition_type.name}}</span> | Date : <span class="badge badge-pill badge-success">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>
+                <h4>On Course</h4>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let st of competition.start_times"><h2 class="display-4">{{st.display}}</h2></div>
+                </div>
+                <p>
+                    <button type="button" class="btn btn-info" [routerLink]="['/competitions/results', competition._id]">Results</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -41,7 +41,7 @@ export class CompetitionsListComponent implements OnInit, OnDestroy {
         })
     }
 
-    // Ng on destroy
+    // Ng on destroy 
     // When view ends
     // @params none
     // @returns none

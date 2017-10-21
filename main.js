@@ -16,6 +16,7 @@ const competition_type = require( './server/routes/competition_type' )
 const stage = require( './server/routes/stage' )
 const stage_type = require( './server/routes/stage_type' )
 const round = require( './server/routes/round' )
+const start_time = require( './server/routes/start_time' )
 
 mongoose.connect('mongodb://localhost:27017/ultraman');
 
@@ -32,6 +33,7 @@ api.use( '/api/registration/', registration )
 api.use( '/api/stage/', stage )
 api.use( '/api/stage_type/', stage_type )
 api.use( '/api/round/', round )
+api.use( '/api/start_time/', start_time )
 
 api.get( '*', ( req, res ) => {
     res.sendFile( path.join( __dirname, 'dist_angular/index.html' ) );

@@ -1,10 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { CompetitionService } from './competition.service'
 import { RegistrationService } from './registration.service'
-import { Router, ActivatedRoute } from '@angular/router';
+import { StartTimeService } from '../start_times/starttime.service'
+import { Router, ActivatedRoute } from '@angular/router'
 
 import { Subscription } from "rxjs";
 import { TimerObservable } from "rxjs/observable/TimerObservable";
+
+import * as moment from 'moment'
 
 @Component({
     selector: 'competitions-stage',
@@ -18,11 +21,14 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
     public stage
     public rounds: Array<Number> = []
     public stage_id 
+    public start_time
+
     // constructor
     // @params service: competition service
     // @returns none
     constructor(    private service:CompetitionService,
                     private registration_service:RegistrationService,
+                    private start_time_service:StartTimeService,
                     private router:Router,
                     private activated_route:ActivatedRoute ) {
     }
@@ -36,7 +42,6 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
             let id = params[ 'id' ]
             this.stage_id = params[ 'stageId' ]
             this.getCompetition( id, this.stage_id )
-            this.getAllRegistrations( id )
         })
     }
 
@@ -64,6 +69,23 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
                     for( let i = 0; i < this.stage.rounds; i++ ) {
                         this.rounds.push( i + 1 )
                     }
+                    this.getStartTime( this.stage.start_time )
+                }
+            })
+    }
+
+    // This is because of shit on the backend
+    // @param id
+    // @returns none
+    getStartTime( id ) : void {
+        this.start_time_service.detail( id )
+            .map( res => res.json() )
+            .subscribe( response => {
+                if( response.error ) {
+                    console.log( response.message )
+                } else {
+                    this.start_time = response.data
+                    this.getAllRegistrations( )
                 }
             })
     }
@@ -71,14 +93,16 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
     // Gets all competitions from the service
     // @params none
     // @returns none
-    getAllRegistrations( id ) : void {
-        this.registration_service.getAllByCompetitionId( id )
+    getAllRegistrations( ) : void {
+        this.registration_service.getAllByCompetitionId( this.competition._id )
             .map( res => res.json() )
-            .subscribe( ( response ) => {
-                this.registrations = response.data
-                this.registrations.forEach( r => {
-                    r.rounds = r.rounds.filter( round => round.stage == this.stage_id )
-                })
+            .subscribe( response => {
+                if( !response.error ) {
+                    this.registrations = response.data
+                    this.calculateResults()
+                } else {
+                    console.log( "There was an error getting the results." )
+                }
             })
     }
 
@@ -90,8 +114,25 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
             .map( res => res.json() )
             .subscribe( response => {
                 console.log( `This was saved on registration; Server says ${response.message}.` )
+                this.calculateResults()
             })
     }
 
-
+    // calculate results
+    // this will calculate the results total of each result
+    // @params none
+    // @returns none
+    calculateResults() : void {
+        var the_start_time = moment( this.start_time.date, 'HH:mm:ss' )
+        this.registrations.forEach( r => {
+            r.rounds = r.rounds.filter( round => round.stage == this.stage_id )
+            let filtered_rounds = r.rounds.filter( round => round.time != "00:00:00" )
+            let last_round = filtered_rounds[filtered_rounds.length - 1]
+            if( last_round ) {
+                r.total = moment.utc( moment( last_round.time, "HH:mm:ss" ).diff( the_start_time ) ).format( "HH:mm:ss" )
+            } else {
+                r.total = "00:00:00"                        
+            }
+        })
+    }
 }

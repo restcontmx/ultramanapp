@@ -12,6 +12,7 @@ export class CompetitionsDetailComponent implements OnInit {
     
     competition
     registrations
+    public errors : String
 
     // Constructor function
     // @param service : competition service
@@ -71,19 +72,34 @@ export class CompetitionsDetailComponent implements OnInit {
     // @param start time
     // @return none
     start( start_time ) : void {
-        start_time.state = true
-        this.competition.isOn = true
-        this.service.startTimesUpdate( this.competition )
-            .map( res => res.json() )
-            .subscribe( response => {
-                if( response.error ) {
-                    console.log( response.message )
-                } else {
-                    this.activeStartTime( start_time )
-                    console.log( "Updated" )
-                }
-            })
+        if( this.validateTimes() ) {
+            start_time.state = true
+            this.competition.isOn = true
+            this.service.startTimesUpdate( this.competition )
+                .map( res => res.json() )
+                .subscribe( response => {
+                    if( response.error ) {
+                        this.errors = response.message
+                    } else {
+                        this.activeStartTime( start_time )
+                        this.errors = ""
+                    }
+                })
+        } else {
+            this.errors = "There was an error with the time formats; make sure they are hh:mm:ss format."
+        }
     } 
+
+    // this shit will validate the times are in the right format
+    validateTimes() : Boolean {
+        var ret = true
+        var regx_val = /\d{2}:\d{2}:\d{2}/
+        this.competition.start_times.some( st => {
+            ret = regx_val.test( st.date )
+            return ret === false
+        })
+        return ret
+    }
 
     // quick start function
     // This will set the date just in the moment it was pressed

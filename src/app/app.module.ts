@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AppComponent } from './app.component'
 
 import { DashboardComponent } from './auth/dashboard.component'
+import { MainComponent } from './auth/main.component'
 import { NavBarComponent } from './menu/navbar.component'
 import { SideBarComponent } from './menu/sidebar.component'
 
@@ -32,6 +33,7 @@ import { CategoriesNewComponent } from './categories/categories.new.component'
 
 import { CompetitionTypeService } from './competition_types/competition_types.service'
 import { RegistrationService } from './competitions/registration.service'
+import { StartTimeService } from './start_times/starttime.service'
 
 import { RouterModule, Routes } from '@angular/router'
 import { DateTimePickerModule } from 'ng-pick-datetime'
@@ -43,6 +45,10 @@ const appRoutes: Routes = [
         path: '', component: DashboardComponent,
         canActivate: [ AlwaysAuthGuard ],
         children : [
+            {
+                path: '',
+                component: MainComponent 
+            },
             {
                 path: 'competitions',
                 component: CompetitionsComponent,
@@ -86,7 +92,8 @@ const appRoutes: Routes = [
         CategoriesNewComponent,
         CompetitionsRegistrationComponent,
         CompetitionsResultsComponent,
-        CompetitionsStageComponent
+        CompetitionsStageComponent,
+        MainComponent
     ],
     imports: [
         HttpModule,
@@ -106,7 +113,8 @@ const appRoutes: Routes = [
         CompetitionService,
         CompetitionTypeService,
         CategoryService,
-        RegistrationService
+        RegistrationService,
+        StartTimeService
     ],
     bootstrap: [ AppComponent ]
 })
