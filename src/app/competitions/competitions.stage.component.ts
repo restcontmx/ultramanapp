@@ -99,6 +99,7 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
             .subscribe( response => {
                 if( !response.error ) {
                     this.registrations = response.data
+                    this.registrations.forEach( r => r.original_rounds = r.rounds )
                     this.calculateResults()
                 } else {
                     console.log( "There was an error getting the results." )
@@ -114,7 +115,7 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
             .map( res => res.json() )
             .subscribe( response => {
                 console.log( `This was saved on registration; Server says ${response.message}.` )
-                this.calculateResults()
+                this.getAllRegistrations()
             })
     }
 
@@ -125,8 +126,18 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
     calculateResults() : void {
         var the_start_time = moment( this.start_time.date, 'HH:mm:ss' )
         this.registrations.forEach( r => {
-            r.rounds = r.rounds.filter( round => round.stage == this.stage_id )
-            let filtered_rounds = r.rounds.filter( round => round.time != "00:00:00" )
+            if( this.competition.competition_type.value == 1 ){ 
+                let l_s = this.getLastStageBrother( this.stage )
+                if( l_s ) {
+                    let last_rounds = r.original_rounds.filter( round => round.stage == l_s._id && round.time != "00:00:00" )
+                    let filtered_last_round = last_rounds[ last_rounds.length - 1 ]
+                    if( filtered_last_round ) {
+                        the_start_time = moment( filtered_last_round.time, 'HH:mm:ss' )
+                    }
+                }
+            }
+            r.rounds = r.original_rounds.filter( round => round.stage == this.stage_id )
+            let filtered_rounds = r.rounds.filter( round => ( round.stage == this.stage_id && round.time != "00:00:00" ) )
             let last_round = filtered_rounds[filtered_rounds.length - 1]
             if( last_round ) {
                 r.total = moment.utc( moment( last_round.time, "HH:mm:ss" ).diff( the_start_time ) ).format( "HH:mm:ss" )
@@ -134,5 +145,13 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
                 r.total = "00:00:00"                        
             }
         })
+    }
+
+    // Returns the last stage brother if there is one else null
+    // @param stage object
+    // @return stage object
+    getLastStageBrother( stage ) {
+        let rs = this.competition.stages.filter( s => s.start_time == stage.start_time )
+        return rs.length == 2 && rs[rs.length-1]._id == stage._id ? rs[rs.length-2] : null
     }
 }

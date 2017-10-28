@@ -14,11 +14,13 @@ import {NgForm} from '@angular/forms';
 // Login component is the main login view
 export class LoginComponent {
     
+    public errors : String = "" 
+
     // Constructor function
     // @param authservice: authentication service
     // @param router : router service
     // @returns none
-    constructor( private authservice:AuthService, private router:Router ) {}
+    constructor( private auth_service:AuthService, private router:Router ) {}
 
     // Login function
     // This uses the authentication service to validate the user and password
@@ -26,19 +28,16 @@ export class LoginComponent {
     // @returns void
     login = (log: NgForm ) => {
         if( log.valid ) {
-            /** 
-            this.authservice.login( log.value.email, log.value.password )
+            this.auth_service.login( log.value.email, log.value.password )
                 .map( res => res.json() )
                 .subscribe( ( response ) => {
                     if( !response.error ) {
-                        console.log( "Valid credentials" );
+                        localStorage.setItem( "user_info", response.data )
                         this.router.navigateByUrl( '/' );
                     } else {
-                        console.log( "Not valid login", response.message )
-                        alert( response.message )
+                        this.errors = response.message
                     }
-                });*/
-            this.router.navigateByUrl( '/' );
+                });
         }
     }
 }

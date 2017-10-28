@@ -3,8 +3,9 @@ body {
     padding-bottom: 40px;
     background-color: #eee;
 }
-.container {
-    margin-top: 70px;
+.container-fluid {
+    margin: 0px;
+    margin-top : -50px;
 }
 .form-signin {
     max-width: 330px;
@@ -38,4 +39,24 @@ body {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+.inside-container {
+    height: 100vh; 
+}
+
+.left-window {
+    background-color: rgb(96, 38, 204);
+    color: #fff;
+    min-height: 100%;
+}
+
+.inside-window {
+    margin-left: 4%;
+    margin-top: 10%;
+    margin-right: 20%;
+}
+
+.inside-login {
+    margin-top: 30%;
 }

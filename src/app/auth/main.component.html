@@ -9,12 +9,27 @@
                 <p>Type : <span class="badge badge-pill badge-info">{{competition.competition_type.name}}</span> | Date : <span class="badge badge-pill badge-success">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>
                 <h4>On Course</h4>
                 <div class="row">
-                    <div class="col-md-4" *ngFor="let st of competition.start_times"><h2 class="display-4">{{st.display}}</h2></div>
+                    <div class="col-md-4" *ngFor="let st of competition.start_times">
+                        <h2 *ngIf="st.state" class="display-2">{{st.display}}</h2>
+                        <h2 *ngIf="!st.state" class="display-4">{{st.display}}</h2>
+                    </div>
                 </div>
                 <p>
-                    <button type="button" class="btn btn-info" [routerLink]="['/competitions/results', competition._id]">Results</button>
+                    <button type="button" class="btn btn-info" [routerLink]="['/competitions/results', competition._id]"><i class="fa fa-list-ol" aria-hidden="true"></i> Results</button>
                 </p>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3></h3>
+    </div>
+    <div class="col-md-8">
+
+    </div>
+    <div class="col-md-4">
+
     </div>
 </div>

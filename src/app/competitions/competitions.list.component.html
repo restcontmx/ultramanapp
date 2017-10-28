@@ -1,5 +1,9 @@
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Competitions</li>
+    </ol>
+</nav>
 <h2>{{title}}</h2>
-
 <hr>
 <table class="table table-hover">
     <thead>
@@ -22,8 +26,8 @@
             <td>{{competition.start_date | date : 'MM/dd/y'}}</td>
             <td>{{competition.competition_type.name}}</td>
             <td>{{competition.isOn ? 'On Course' : 'Stopped'}}</td>
-            <td><a href="" [routerLink]="['/competitions/results/', competition._id ]"><button class="btn btn-block btn-info"><i class="fa fa-bar-chart" aria-hidden="true"></i></button></a></td>
-            <td><a href="" [routerLink]="['/competitions/registration/', competition._id ]"><button class="btn btn-block btn-info"><i class="fa fa-user-circle" aria-hidden="true"></i></button></a></td>
+            <td><a href="" [routerLink]="['/competitions/results/', competition._id ]"><button class="btn btn-block btn-info"><i class="fa fa-list-ol" aria-hidden="true"></i></button></a></td>
+            <td><a href="" [routerLink]="['/competitions/registration/', competition._id ]"><button class="btn btn-block btn-info"><i class="fa fa-address-card-o" aria-hidden="true"></i></button></a></td>
             <td><a href="" [routerLink]="['/competitions/detail/', competition._id ]"><button class="btn btn-block btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a></td>
             <td><a (click)="delete( competition._id )"><button class="btn btn-block btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></a></td>
         </tr>

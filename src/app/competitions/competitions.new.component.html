@@ -1,3 +1,12 @@
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions']">Competitions</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">New Competition</li>
+    </ol>
+</nav>
+
 <form #competitionForm="ngForm" (ngSubmit)="add(competitionForm)">
     <div class="row">
         <div class="col-md-12">
@@ -39,11 +48,11 @@
         </div>
 
         <div class="col-md-6">
-            <button [routerLink]="['/competitions']" class="btn btn-block btn-default">Cancel</button>                
+            <button [routerLink]="['/competitions']" class="btn btn-block btn-default"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Cancel</button>                
         </div>
 
         <div class="col-md-6">
-            <button type="submit" class="btn btn-block btn-primary">Submit</button>                
+            <button type="submit" class="btn btn-block btn-primary"><i class="fa fa-upload" aria-hidden="true"></i> Submit</button>                
         </div>
     </div>
 </form>

@@ -1,12 +1,24 @@
+<nav aria-label="breadcrumb" role="navigation" *ngIf="competition">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions']">Competitions</a>
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions/detail', competition._id]">{{competition.name}} [detail]</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page" *ngIf="stage" >{{stage.name}} [stage]</li>
+    </ol>
+</nav>
+
 <h2>{{title}}</h2>
 <div class="row"  *ngIf="competition">
     <div class="col-md-12">
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/competitions/detail', competition._id]" href="">Go Back</a>
+                <a class="nav-link" [routerLink]="['/competitions/detail', competition._id]" href="javascript:void(0)"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Go Back</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="saveRounds()" href="javascript:void(0)">Save</a>
+                <a class="nav-link" (click)="saveRounds()" href="javascript:void(0)"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</a>
             </li>
         </ul>
     </div>
@@ -14,7 +26,7 @@
 <br>
 <div class="row" *ngIf="registrations && rounds">
     <div class="col-md-12">
-        <table class="table table-sm table-hover">
+        <table class="table table-sm table-hover table-bordered table-responsive">
             <thead>
                 <tr class="table-success">
                     <th>#</th>

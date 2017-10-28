@@ -1,9 +1,21 @@
+<nav aria-label="breadcrumb" role="navigation" *ngIf="competition">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions']">Competitions</a>
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions/detail', competition._id]">{{competition.name}} [detail]</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Results</li>
+    </ol>
+</nav>
+    
 <h2>{{title}}</h2>
 <hr>
 <div class="row">
     <div class="col-md-12" *ngIf="competition && competition.competition_type.value == 1 && calc_done">
-        <table class="table table-sm table-bordered table-responsive">
-            <thead class="thead-inverse">
+        <table class="table table-sm table-hover table-bordered table-responsive">
+            <thead>
                 <tr>
                     <th colspan="3"></th>
                     <th colspan="3" class="table-info">Day 1</th>

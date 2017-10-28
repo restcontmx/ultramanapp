@@ -1,3 +1,10 @@
+<nav aria-label="breadcrumb" role="navigation" *ngIf="competition">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page"><a [routerLink]="['/competitions']">Categories</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{competition.name}} [detail]</li>
+    </ol>
+</nav>
+
 <div class="row" *ngIf="competition">
     <div class="col-md-12" *ngIf="errors">
         <div class="alert alert-danger" role="alert">
@@ -13,9 +20,9 @@
                 <h4 *ngIf="!competition.isOn">Not Running</h4>
                 <h4 *ngIf="competition.isOn">On Course</h4>
                 <p>
-                    <button type="button" class="btn btn-warning" [routerLink]="['/competitions/edit', competition._id]">Edit</button>
-                    <button type="button" class="btn btn-primary" [routerLink]="['/competitions/registration', competition._id]">Register</button>
-                    <button type="button" class="btn btn-info" [routerLink]="['/competitions/results', competition._id]">Results</button>
+                    <button type="button" class="btn btn-warning" [routerLink]="['/competitions/edit', competition._id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
+                    <button type="button" class="btn btn-primary" [routerLink]="['/competitions/registration', competition._id]"><i class="fa fa-address-card-o" aria-hidden="true"></i> Register</button>
+                    <button type="button" class="btn btn-info" [routerLink]="['/competitions/results', competition._id]"><i class="fa fa-list-ol" aria-hidden="true"></i> Results</button>
                 </p>
             </div>
         </div>

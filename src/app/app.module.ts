@@ -35,6 +35,8 @@ import { CompetitionTypeService } from './competition_types/competition_types.se
 import { RegistrationService } from './competitions/registration.service'
 import { StartTimeService } from './start_times/starttime.service'
 
+import { HelpComponent } from './settings/help.component'
+
 import { RouterModule, Routes } from '@angular/router'
 import { DateTimePickerModule } from 'ng-pick-datetime'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -71,6 +73,10 @@ const appRoutes: Routes = [
                     {  path: 'new', component : CategoriesNewComponent }
                 ]
             },
+            {
+                path: 'help',
+                component: HelpComponent
+            }
         ]
     },
 ];
@@ -93,7 +99,8 @@ const appRoutes: Routes = [
         CompetitionsRegistrationComponent,
         CompetitionsResultsComponent,
         CompetitionsStageComponent,
-        MainComponent
+        MainComponent,
+        HelpComponent
     ],
     imports: [
         HttpModule,

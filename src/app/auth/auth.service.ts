@@ -23,7 +23,7 @@ export class AuthService {
     viewVerification = () : boolean => {
         //let userData = this.cookie_service.get( 'userdata' ) || null;
         //return userData ? true : false;
-        return true;
+        return localStorage.getItem( "user_info" ) ? true : false
     }
 
     // Login function
@@ -32,7 +32,7 @@ export class AuthService {
     // @param password : string - user password for auth
     // @returns a login pettition
     login( email:string, password:string ) {
-        return this.http_service.post( '/api/auth/login/', { 'email' : email, 'password' : password })        
+        return this.http_service.post( '/api/auth/login', { 'email' : email, 'password' : password })        
     }
 
     // Log out function
@@ -40,6 +40,6 @@ export class AuthService {
     // @params none
     // @returns a logout pettition
     logout = () => {
-        return this.http_service.post( '/api/auth/logout/', {});
+        localStorage.removeItem( "user_info" )
     }
 }

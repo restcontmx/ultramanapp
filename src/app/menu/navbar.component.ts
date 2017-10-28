@@ -20,10 +20,6 @@ export class NavBarComponent {
     // @returns none
     logout = () => {
         this.auth_service.logout()
-            .map( res => res.json() )
-            .subscribe( ( response ) => {
-                this.router.navigateByUrl( '/login' )
-                console.log( "Log out succesful" )
-            })
+        this.router.navigateByUrl( '/login' )
     }
 }

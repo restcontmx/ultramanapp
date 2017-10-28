@@ -106,16 +106,18 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__competition_types_competition_types_service__ = __webpack_require__("../../../../../src/app/competition_types/competition_types.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__competitions_registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__start_times_starttime_service__ = __webpack_require__("../../../../../src/app/start_times/starttime.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime__ = __webpack_require__("../../../../ng-pick-datetime/picker.module.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__settings_help_component__ = __webpack_require__("../../../../../src/app/settings/help.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime__ = __webpack_require__("../../../../ng-pick-datetime/picker.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -179,6 +181,10 @@ var appRoutes = [
                     { path: 'new', component: __WEBPACK_IMPORTED_MODULE_24__categories_categories_new_component__["a" /* CategoriesNewComponent */] }
                 ]
             },
+            {
+                path: 'help',
+                component: __WEBPACK_IMPORTED_MODULE_28__settings_help_component__["a" /* HelpComponent */]
+            }
         ]
     },
 ];
@@ -206,16 +212,17 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_18__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */],
             __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */],
             __WEBPACK_IMPORTED_MODULE_20__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__auth_main_component__["a" /* MainComponent */]
+            __WEBPACK_IMPORTED_MODULE_7__auth_main_component__["a" /* MainComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__settings_help_component__["a" /* HelpComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_28__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: false } // <-- debugging purposes only
+            __WEBPACK_IMPORTED_MODULE_29__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: false } // <-- debugging purposes only
             ),
-            __WEBPACK_IMPORTED_MODULE_30__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_31__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
-            __WEBPACK_IMPORTED_MODULE_29_ng_pick_datetime__["DateTimePickerModule"]
+            __WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime__["DateTimePickerModule"]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_12__auth_auth_service__["a" /* AuthService */],
@@ -322,7 +329,6 @@ var AuthService = (function () {
     // @param cookie_service:Cookie service 
     // @returns none
     function AuthService(http_service, cookie_service) {
-        var _this = this;
         this.http_service = http_service;
         this.cookie_service = cookie_service;
         // View validation
@@ -332,14 +338,14 @@ var AuthService = (function () {
         this.viewVerification = function () {
             //let userData = this.cookie_service.get( 'userdata' ) || null;
             //return userData ? true : false;
-            return true;
+            return localStorage.getItem("user_info") ? true : false;
         };
         // Log out function
         // This will handle the http pettition to log out
         // @params none
         // @returns a logout pettition
         this.logout = function () {
-            return _this.http_service.post('/api/auth/logout/', {});
+            localStorage.removeItem("user_info");
         };
     }
     // Login function
@@ -348,7 +354,7 @@ var AuthService = (function () {
     // @param password : string - user password for auth
     // @returns a login pettition
     AuthService.prototype.login = function (email, password) {
-        return this.http_service.post('/api/auth/login/', { 'email': email, 'password': password });
+        return this.http_service.post('/api/auth/login', { 'email': email, 'password': password });
     };
     return AuthService;
 }());
@@ -446,7 +452,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body {\n    padding-top: 40px;\n    padding-bottom: 40px;\n    background-color: #eee;\n}\n.container {\n    margin-top: 70px;\n}\n.form-signin {\n    max-width: 330px;\n    padding: 15px;\n    margin: 0 auto;\n}\n.form-signin .form-signin-heading,\n.form-signin .checkbox {\n    margin-bottom: 10px;\n}\n.form-signin .checkbox {\n    font-weight: normal;\n}\n.form-signin .form-control {\n    position: relative;\n    height: auto;\n    box-sizing: border-box;\n    padding: 10px;\n    font-size: 16px;\n}\n.form-signin .form-control:focus {\n    z-index: 2;\n}\n.form-signin input[type=\"email\"] {\n    margin-bottom: -1px;\n    border-bottom-right-radius: 0;\n    border-bottom-left-radius: 0;\n}\n.form-signin input[type=\"password\"] {\n    margin-bottom: 10px;\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n}", ""]);
+exports.push([module.i, "body {\n    padding-top: 40px;\n    padding-bottom: 40px;\n    background-color: #eee;\n}\n.container-fluid {\n    margin: 0px;\n    margin-top : -50px;\n}\n.form-signin {\n    max-width: 330px;\n    padding: 15px;\n    margin: 0 auto;\n}\n.form-signin .form-signin-heading,\n.form-signin .checkbox {\n    margin-bottom: 10px;\n}\n.form-signin .checkbox {\n    font-weight: normal;\n}\n.form-signin .form-control {\n    position: relative;\n    height: auto;\n    box-sizing: border-box;\n    padding: 10px;\n    font-size: 16px;\n}\n.form-signin .form-control:focus {\n    z-index: 2;\n}\n.form-signin input[type=\"email\"] {\n    margin-bottom: -1px;\n    border-bottom-right-radius: 0;\n    border-bottom-left-radius: 0;\n}\n.form-signin input[type=\"password\"] {\n    margin-bottom: 10px;\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n}\n\n.inside-container {\n    height: 100vh; \n}\n\n.left-window {\n    background-color: rgb(96, 38, 204);\n    color: #fff;\n    min-height: 100%;\n}\n\n.inside-window {\n    margin-left: 4%;\n    margin-top: 10%;\n    margin-right: 20%;\n}\n\n.inside-login {\n    margin-top: 30%;\n}", ""]);
 
 // exports
 
@@ -459,7 +465,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/auth/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <form #log=\"ngForm\" class=\"form-signin\" (ngSubmit)=\"login(log)\">\n        <h2 class=\"form-signin-heading\">Camaleon Reports Control Panel</h2>\n        <br>\n        <label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n        <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" name=\"email\" required autofocus ngModel>\n        <label for=\"inputPassword\" class=\"sr-only\">Password</label>\n        <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" name=\"password\" required ngModel>\n        <br>\n        <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Sign in</button>\n    </form>\n</div>\n<!-- /container -->"
+module.exports = "<div class=\"container-fluid inside-container\">\n    <div class=\"row inside-container\">\n        <div class=\"col-md-4 col-md-push-4\">\n            <div class=\"inside-login\">\n\n                <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"errors\">\n                    {{errors}}\n                </div>\n                \n                <form #log=\"ngForm\" class=\"form-signin\" (ngSubmit)=\"login(log)\">\n                    <h2 class=\"form-signin-heading\">Log In</h2>\n                    <br>\n                    <label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n                    <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" name=\"email\" required autofocus ngModel>\n                    <label for=\"inputPassword\" class=\"sr-only\">Password</label>\n                    <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" name=\"password\" required ngModel>\n                    <br>\n                    <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Sign in</button>\n                </form>\n            </div>\n        </div>\n        <div class=\"col-md-8 col-md-pull-8 left-window\">\n            <div class=\"inside-window\">\n                <h1 class=\"display-1\">RestCont Race Control System</h1>\n                <h4 class=\"display-4\">Control your races and get instant results.</h4>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- /container -->"
 
 /***/ }),
 
@@ -488,29 +494,28 @@ var LoginComponent = (function () {
     // @param authservice: authentication service
     // @param router : router service
     // @returns none
-    function LoginComponent(authservice, router) {
+    function LoginComponent(auth_service, router) {
         var _this = this;
-        this.authservice = authservice;
+        this.auth_service = auth_service;
         this.router = router;
+        this.errors = "";
         // Login function
         // This uses the authentication service to validate the user and password
         // @params none
         // @returns void
         this.login = function (log) {
             if (log.valid) {
-                /**
-                this.authservice.login( log.value.email, log.value.password )
-                    .map( res => res.json() )
-                    .subscribe( ( response ) => {
-                        if( !response.error ) {
-                            console.log( "Valid credentials" );
-                            this.router.navigateByUrl( '/' );
-                        } else {
-                            console.log( "Not valid login", response.message )
-                            alert( response.message )
-                        }
-                    });*/
-                _this.router.navigateByUrl('/');
+                _this.auth_service.login(log.value.email, log.value.password)
+                    .map(function (res) { return res.json(); })
+                    .subscribe(function (response) {
+                    if (!response.error) {
+                        localStorage.setItem("user_info", response.data);
+                        _this.router.navigateByUrl('/');
+                    }
+                    else {
+                        _this.errors = response.message;
+                    }
+                });
             }
         };
     }
@@ -535,7 +540,7 @@ var _a, _b;
 /***/ "../../../../../src/app/auth/main.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Welcome Ramiro Gutierrez Alaniz</h1>\n\n<div class=\"row\" *ngIf=\"competitions\">\n    <div class=\"col-md-12\" *ngFor=\"let competition of active_competitions\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4>On Course</h4>\n                <div class=\"row\">\n                    <div class=\"col-md-4\" *ngFor=\"let st of competition.start_times\"><h2 class=\"display-4\">{{st.display}}</h2></div>\n                </div>\n                <p>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\">Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<h1>Welcome Ramiro Gutierrez Alaniz</h1>\n\n<div class=\"row\" *ngIf=\"competitions\">\n    <div class=\"col-md-12\" *ngFor=\"let competition of active_competitions\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4>On Course</h4>\n                <div class=\"row\">\n                    <div class=\"col-md-4\" *ngFor=\"let st of competition.start_times\">\n                        <h2 *ngIf=\"st.state\" class=\"display-2\">{{st.display}}</h2>\n                        <h2 *ngIf=\"!st.state\" class=\"display-4\">{{st.display}}</h2>\n                    </div>\n                </div>\n                <p>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i> Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-md-12\">\n        <h3></h3>\n    </div>\n    <div class=\"col-md-8\">\n\n    </div>\n    <div class=\"col-md-4\">\n\n    </div>\n</div>"
 
 /***/ }),
 
@@ -638,7 +643,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/categories/categories.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-3\">\n        <div class=\"list-group\">\n            <a [routerLink]=\"['/categories']\" class=\"list-group-item list-group-item-action\"><i class=\"fa fa-list\" aria-hidden=\"true\"></i> List</a>\n            <a [routerLink]=\"['/categories/new']\" class=\"list-group-item list-group-item-action\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> New</a>\n        </div>\n    </div>\n    <div class=\"col-md-9\">\n        <router-outlet></router-outlet>\n    </div>\n</div>"
+module.exports = "<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-3\">\n        <div class=\"list-group\">\n            <a [routerLink]=\"['/categories']\" class=\"list-group-item list-group-item-action\"><i class=\"fa fa-list\" aria-hidden=\"true\"></i> &nbsp;List</a>\n            <a [routerLink]=\"['/categories/new']\" class=\"list-group-item list-group-item-action\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> &nbsp;New</a>\n        </div>\n    </div>\n    <div class=\"col-md-9\">\n        <router-outlet></router-outlet>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -691,7 +696,7 @@ var _a;
 /***/ "../../../../../src/app/categories/categories.list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n\n<hr>\n<table class=\"table table-inverse\">\n    <thead>\n        <tr>\n            <th>Name</th>\n            <th>Description</th>\n            <th>Age 1</th>\n            <th>Age 2</th>\n            <th>Edit</th>\n            <th>Delete</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let category of categories\">\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\">{{category.name}}</a></td>\n            <td>{{category.description}}</td>\n            <td>{{category.age_1}}</td>\n            <td>{{category.age_2}}</td>\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\"><button class=\"btn btn-block btn-warning\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\"><button class=\"btn btn-block btn-danger\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></button></a></td>\n        </tr>\n    </tbody>\n</table>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Categories</li>\n    </ol>\n</nav>\n<h2>{{title}}</h2>\n<hr>\n<table class=\"table table-inverse\">\n    <thead>\n        <tr>\n            <th>Name</th>\n            <th>Description</th>\n            <th>Age 1</th>\n            <th>Age 2</th>\n            <th>Edit</th>\n            <th>Delete</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let category of categories\">\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\">{{category.name}}</a></td>\n            <td>{{category.description}}</td>\n            <td>{{category.age_1}}</td>\n            <td>{{category.age_2}}</td>\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\"><button class=\"btn btn-block btn-warning\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\"><button class=\"btn btn-block btn-danger\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></button></a></td>\n        </tr>\n    </tbody>\n</table>"
 
 /***/ }),
 
@@ -766,7 +771,7 @@ var _a;
 /***/ "../../../../../src/app/categories/categories.new.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form #categoryForm=\"ngForm\" (ngSubmit)=\"add(categoryForm)\">\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"name\">Name</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"name\"\n                        placeholder=\"Name\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"description\">Description</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"description\"\n                        placeholder=\"Description\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n        \n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"age_1\">Age 1</label>\n                <input  type=\"number\"\n                        class=\"form-control\"\n                        name=\"age_1\"\n                        placeholder=\"Age 1\"\n                        required autofocus ngModel> \n            </div>         \n        </div>\n        \n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"age_2\">Age 2</label>\n                <input  type=\"number\"\n                        class=\"form-control\"\n                        name=\"age_2\"\n                        placeholder=\"Age 2\"\n                        required autofocus ngModel>\n            </div>         \n        </div>\n\n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"age_2\">Sex</label>\n                <select name=\"sex\" class=\"form-control\" required ngModel>\n                    <option value=\"0\">MALE</option>\n                    <option value=\"1\">FEMALE</option>\n                </select>\n            </div>         \n        </div>\n\n        <div class=\"col-md-6\">\n            <button [routerLink]=\"['categories']\" class=\"btn btn-block btn-default\">Cancel</button>                \n        </div>\n\n        <div class=\"col-md-6\">\n            <button type=\"submit\" class=\"btn btn-block btn-primary\">Submit</button>                \n        </div>\n    </div>\n</form>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/categories']\">Categories</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">New Category</li>\n    </ol>\n</nav>\n    \n<form #categoryForm=\"ngForm\" (ngSubmit)=\"add(categoryForm)\">\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"name\">Name</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"name\"\n                        placeholder=\"Name\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"description\">Description</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"description\"\n                        placeholder=\"Description\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n        \n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"age_1\">Age 1</label>\n                <input  type=\"number\"\n                        class=\"form-control\"\n                        name=\"age_1\"\n                        placeholder=\"Age 1\"\n                        required autofocus ngModel> \n            </div>         \n        </div>\n        \n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"age_2\">Age 2</label>\n                <input  type=\"number\"\n                        class=\"form-control\"\n                        name=\"age_2\"\n                        placeholder=\"Age 2\"\n                        required autofocus ngModel>\n            </div>         \n        </div>\n\n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"age_2\">Sex</label>\n                <select name=\"sex\" class=\"form-control\" required ngModel>\n                    <option value=\"0\">MALE</option>\n                    <option value=\"1\">FEMALE</option>\n                </select>\n            </div>         \n        </div>\n\n        <div class=\"col-md-6\">\n            <button [routerLink]=\"['/categories']\" class=\"btn btn-block btn-default\"><i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> Cancel</button>                \n        </div>\n\n        <div class=\"col-md-6\">\n            <button type=\"submit\" class=\"btn btn-block btn-primary\"><i class=\"fa fa-upload\" aria-hidden=\"true\"></i> Submit</button>                \n        </div>\n    </div>\n</form>"
 
 /***/ }),
 
@@ -1266,7 +1271,7 @@ var _a;
 /***/ "../../../../../src/app/competitions/competitions.detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" *ngIf=\"competition\">\n    <div class=\"col-md-12\" *ngIf=\"errors\">\n        <div class=\"alert alert-danger\" role=\"alert\">\n            {{errors}}\n        </div>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4 *ngIf=\"!competition.isOn\">Not Running</h4>\n                <h4 *ngIf=\"competition.isOn\">On Course</h4>\n                <p>\n                    <button type=\"button\" class=\"btn btn-warning\" [routerLink]=\"['/competitions/edit', competition._id]\">Edit</button>\n                    <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/competitions/registration', competition._id]\">Register</button>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\">Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n    <hr>    \n    <div class=\"col-md-4\">\n        <h3>Stages</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-danger\">\n                    <th>Stage</th>\n                    <th>Checks</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let s of competition.stages\" [routerLink]=\"['/competitions/stage', competition._id, s._id ]\">\n                    <td>{{s.name}}</td>\n                    <td>{{s.rounds}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <div class=\"col-md-8\">\n        <h3>Start Times</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>Day</th>\n                    <th>State</th>                    \n                    <th>Time</th>\n                    <th>Custom Start</th>\n                    <th>Quick Start</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let st of competition.start_times; let i = index\">\n                    <td>{{st.name}}</td>\n                    <td>{{st.state? 'ON' : 'OFF' }}</td>\n                    <td>\n                        <div contenteditable=\"true\"\n                            [textContent]=\"competition.start_times[i].date\"\n                            (input)=\"competition.start_times[i].date = $event.target.textContent\">00:00:00</div>    \n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-success\" *ngIf=\"!st.state\" (click)=\"start(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-info\" *ngIf=\"!st.state\" (click)=\"quickStart(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <hr>\n    <div class=\"col-md-12\">\n        <h3>Competitors</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-info\">\n                    <th>No.</th>\n                    <th>Name</th>\n                    <th>Team</th>\n                    <th>Category</th>\n                    <th>Age</th>\n                    <th>Sex</th>\n                    <th>Edit</th>\n                    <th>Delete</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let registration of registrations\">\n                    <td>{{registration.competitor_number}}</td>\n                    <td>{{registration.first_name}} {{registration.last_name}}</td>\n                    <td>{{registration.team}}</td>\n                    <td>{{registration.category.name}}</td>\n                    <td>{{registration.age}}</td>\n                    <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>\n                    <td>\n                        <a href=\"\" [routerLink]=\"['/registration/detail/', registration._id ]\">\n                            <button class=\"btn btn-block btn-warning\">\n                                <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                    <td>\n                        <a (click)=\"delete( registration._id )\">\n                            <button class=\"btn btn-block btn-danger\">\n                                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\"><a [routerLink]=\"['/competitions']\">Categories</a></li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">{{competition.name}} [detail]</li>\n    </ol>\n</nav>\n\n<div class=\"row\" *ngIf=\"competition\">\n    <div class=\"col-md-12\" *ngIf=\"errors\">\n        <div class=\"alert alert-danger\" role=\"alert\">\n            {{errors}}\n        </div>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4 *ngIf=\"!competition.isOn\">Not Running</h4>\n                <h4 *ngIf=\"competition.isOn\">On Course</h4>\n                <p>\n                    <button type=\"button\" class=\"btn btn-warning\" [routerLink]=\"['/competitions/edit', competition._id]\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i> Edit</button>\n                    <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/competitions/registration', competition._id]\"><i class=\"fa fa-address-card-o\" aria-hidden=\"true\"></i> Register</button>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i> Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n    <hr>    \n    <div class=\"col-md-4\">\n        <h3>Stages</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-danger\">\n                    <th>Stage</th>\n                    <th>Checks</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let s of competition.stages\" [routerLink]=\"['/competitions/stage', competition._id, s._id ]\">\n                    <td>{{s.name}}</td>\n                    <td>{{s.rounds}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <div class=\"col-md-8\">\n        <h3>Start Times</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>Day</th>\n                    <th>State</th>                    \n                    <th>Time</th>\n                    <th>Custom Start</th>\n                    <th>Quick Start</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let st of competition.start_times; let i = index\">\n                    <td>{{st.name}}</td>\n                    <td>{{st.state? 'ON' : 'OFF' }}</td>\n                    <td>\n                        <div contenteditable=\"true\"\n                            [textContent]=\"competition.start_times[i].date\"\n                            (input)=\"competition.start_times[i].date = $event.target.textContent\">00:00:00</div>    \n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-success\" *ngIf=\"!st.state\" (click)=\"start(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-info\" *ngIf=\"!st.state\" (click)=\"quickStart(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <hr>\n    <div class=\"col-md-12\">\n        <h3>Competitors</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-info\">\n                    <th>No.</th>\n                    <th>Name</th>\n                    <th>Team</th>\n                    <th>Category</th>\n                    <th>Age</th>\n                    <th>Sex</th>\n                    <th>Edit</th>\n                    <th>Delete</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let registration of registrations\">\n                    <td>{{registration.competitor_number}}</td>\n                    <td>{{registration.first_name}} {{registration.last_name}}</td>\n                    <td>{{registration.team}}</td>\n                    <td>{{registration.category.name}}</td>\n                    <td>{{registration.age}}</td>\n                    <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>\n                    <td>\n                        <a href=\"\" [routerLink]=\"['/registration/detail/', registration._id ]\">\n                            <button class=\"btn btn-block btn-warning\">\n                                <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                    <td>\n                        <a (click)=\"delete( registration._id )\">\n                            <button class=\"btn btn-block btn-danger\">\n                                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1462,7 +1467,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/competitions/competitions.list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n\n<hr>\n<table class=\"table table-hover\">\n    <thead>\n        <tr>\n            <th>Name</th>\n            <th>Description</th>\n            <th>Start Date</th>\n            <th>Type</th>\n            <th>IsOn</th>\n            <th>Results</th>\n            <th>Registration</th>\n            <th>Edit</th>\n            <th>Delete</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let competition of competitions\">\n            <td><a [routerLink]=\"['/competitions/detail/', competition._id ]\">{{competition.name}}</a></td>\n            <td>{{competition.description}}</td>\n            <td>{{competition.start_date | date : 'MM/dd/y'}}</td>\n            <td>{{competition.competition_type.name}}</td>\n            <td>{{competition.isOn ? 'On Course' : 'Stopped'}}</td>\n            <td><a href=\"\" [routerLink]=\"['/competitions/results/', competition._id ]\"><button class=\"btn btn-block btn-info\"><i class=\"fa fa-bar-chart\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a href=\"\" [routerLink]=\"['/competitions/registration/', competition._id ]\"><button class=\"btn btn-block btn-info\"><i class=\"fa fa-user-circle\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a href=\"\" [routerLink]=\"['/competitions/detail/', competition._id ]\"><button class=\"btn btn-block btn-warning\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a (click)=\"delete( competition._id )\"><button class=\"btn btn-block btn-danger\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></button></a></td>\n        </tr>\n    </tbody>\n</table>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Competitions</li>\n    </ol>\n</nav>\n<h2>{{title}}</h2>\n<hr>\n<table class=\"table table-hover\">\n    <thead>\n        <tr>\n            <th>Name</th>\n            <th>Description</th>\n            <th>Start Date</th>\n            <th>Type</th>\n            <th>IsOn</th>\n            <th>Results</th>\n            <th>Registration</th>\n            <th>Edit</th>\n            <th>Delete</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let competition of competitions\">\n            <td><a [routerLink]=\"['/competitions/detail/', competition._id ]\">{{competition.name}}</a></td>\n            <td>{{competition.description}}</td>\n            <td>{{competition.start_date | date : 'MM/dd/y'}}</td>\n            <td>{{competition.competition_type.name}}</td>\n            <td>{{competition.isOn ? 'On Course' : 'Stopped'}}</td>\n            <td><a href=\"\" [routerLink]=\"['/competitions/results/', competition._id ]\"><button class=\"btn btn-block btn-info\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a href=\"\" [routerLink]=\"['/competitions/registration/', competition._id ]\"><button class=\"btn btn-block btn-info\"><i class=\"fa fa-address-card-o\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a href=\"\" [routerLink]=\"['/competitions/detail/', competition._id ]\"><button class=\"btn btn-block btn-warning\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a (click)=\"delete( competition._id )\"><button class=\"btn btn-block btn-danger\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></button></a></td>\n        </tr>\n    </tbody>\n</table>"
 
 /***/ }),
 
@@ -1568,7 +1573,7 @@ var _a;
 /***/ "../../../../../src/app/competitions/competitions.new.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form #competitionForm=\"ngForm\" (ngSubmit)=\"add(competitionForm)\">\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"name\">Name</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"name\"\n                        placeholder=\"Name\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"description\">Description</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"description\"\n                        placeholder=\"Description\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n        \n        <div class=\"col-md-6\">\n            <div class=\"form-group\">\n                <label for=\"start_date\">Start Date</label>\n                <owl-date-time class=\"form-control\" name=\"start_date\" required autofocus ngModel></owl-date-time>   \n            </div>         \n        </div>\n        \n        <div class=\"col-md-6\">\n            <div class=\"form-group\">\n                <label for=\"competition_type\">Competition Type</label>\n                <select name=\"competition_type\" class=\"form-control\" required ngModel>\n                    <option *ngFor=\"let t of competition_types\" [ngValue]=\"t\">{{t.name}}</option>\n                </select>\n            </div>\n        </div>\n\n        <div class=\"col-md-6\">\n            <button [routerLink]=\"['/competitions']\" class=\"btn btn-block btn-default\">Cancel</button>                \n        </div>\n\n        <div class=\"col-md-6\">\n            <button type=\"submit\" class=\"btn btn-block btn-primary\">Submit</button>                \n        </div>\n    </div>\n</form>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions']\">Competitions</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">New Competition</li>\n    </ol>\n</nav>\n\n<form #competitionForm=\"ngForm\" (ngSubmit)=\"add(competitionForm)\">\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"name\">Name</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"name\"\n                        placeholder=\"Name\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"description\">Description</label>\n                <input  type=\"text\"\n                        class=\"form-control\"\n                        name=\"description\"\n                        placeholder=\"Description\"\n                        required autofocus ngModel>\n            </div>\n        </div>\n        \n        <div class=\"col-md-6\">\n            <div class=\"form-group\">\n                <label for=\"start_date\">Start Date</label>\n                <owl-date-time class=\"form-control\" name=\"start_date\" required autofocus ngModel></owl-date-time>   \n            </div>         \n        </div>\n        \n        <div class=\"col-md-6\">\n            <div class=\"form-group\">\n                <label for=\"competition_type\">Competition Type</label>\n                <select name=\"competition_type\" class=\"form-control\" required ngModel>\n                    <option *ngFor=\"let t of competition_types\" [ngValue]=\"t\">{{t.name}}</option>\n                </select>\n            </div>\n        </div>\n\n        <div class=\"col-md-6\">\n            <button [routerLink]=\"['/competitions']\" class=\"btn btn-block btn-default\"><i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> Cancel</button>                \n        </div>\n\n        <div class=\"col-md-6\">\n            <button type=\"submit\" class=\"btn btn-block btn-primary\"><i class=\"fa fa-upload\" aria-hidden=\"true\"></i> Submit</button>                \n        </div>\n    </div>\n</form>"
 
 /***/ }),
 
@@ -1677,14 +1682,14 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/competitions/competitions.registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form (ngSubmit)=\"register()\">\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <div class=\"form-group\">\n                    <label for=\"first_name\">First Name</label>\n                    <input  type=\"text\"\n                            class=\"form-control\"\n                            name=\"first_name\"\n                            placeholder=\"First Name\"\n                            required autofocus \n                            [(ngModel)]=\"registration.first_name\">\n                </div>\n            </div>\n    \n            <div class=\"col-md-6\">\n                <div class=\"form-group\">\n                    <label for=\"last_name\">Last Name</label>\n                    <input  type=\"text\"\n                            class=\"form-control\"\n                            name=\"last_name\"\n                            placeholder=\"Last Name\"\n                            required autofocus\n                            [(ngModel)]=\"registration.last_name\">\n                </div>\n            </div>\n\n            <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                    <label for=\"bio\">Bio.</label>\n                    <textarea   type=\"text\"\n                                class=\"form-control\"\n                                name=\"bio\"\n                                placeholder=\"Bio.\"\n                                required autofocus\n                                [(ngModel)]=\"registration.bio\"></textarea>\n                </div>\n            </div>\n            \n            <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                    <label for=\"team\">Team</label>\n                    <input  type=\"text\"\n                            class=\"form-control\"\n                            name=\"team\"\n                            placeholder=\"Team\"\n                            required autofocus\n                            [(ngModel)]=\"registration.team\">\n                </div>\n            </div>\n\n            <div class=\"col-md-4\">\n                <div class=\"form-group\">\n                    <label for=\"age\">Age</label>\n                    <input  type=\"number\"\n                            class=\"form-control\"\n                            name=\"age\"\n                            placeholder=\"Number\"\n                            required autofocus\n                            [(ngModel)]=\"registration.age\"\n                            (ngModelChange)=\"selectCategoryTriggerChange()\">\n                </div>\n            </div>\n\n            <div class=\"col-md-4\">\n                <div class=\"form-group\">\n                    <label for=\"sex\">Sex</label>\n                    <select name=\"sex\" class=\"form-control\" \n                        required \n                        [(ngModel)]=\"registration.sex\" \n                        (ngModelChange)=\"selectCategoryTriggerChange()\">\n                            <option *ngFor=\"let s of sexes\" [ngValue]=\"s\">{{s.name}}</option>\n                    </select>\n                </div>\n            </div>\n\n            <div class=\"col-md-4\">\n                <div class=\"form-group\">\n                    <label for=\"category\">Category</label>\n                    <select name=\"category\" class=\"form-control\" required [(ngModel)]=\"registration.category\">\n                        <option *ngFor=\"let c of categories_cb\" [ngValue]=\"c\">{{c.name}} {{c.age_1}}-{{c.age_2}} años {{c.sex == 0 ?'MALE':'FEMALE'}}</option>\n                    </select>\n                </div>\n            </div>\n            \n            <div class=\"col-md-6\">\n                <button [routerLink]=\"['/competitions']\" class=\"btn btn-block btn-default\">Cancel</button>                \n            </div>\n            \n            <div class=\"col-md-6\">\n                <button type=\"submit\" class=\"btn btn-block btn-primary\">Submit</button>                \n            </div>\n        </div>\n    </form>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions']\">Categories</a>\n        </li>\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions/detail', competition._id]\">{{competition.name}} [detail]</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">{{competition.name}} [registration]</li>\n    </ol>\n</nav>\n\n<form (ngSubmit)=\"register()\">\n    <div class=\"row\">\n        <div class=\"col-md-6\">\n            <div class=\"form-group\">\n                <label for=\"first_name\">First Name</label>\n                <input type=\"text\" class=\"form-control\" name=\"first_name\" placeholder=\"First Name\" required autofocus [(ngModel)]=\"registration.first_name\">\n            </div>\n        </div>\n\n        <div class=\"col-md-6\">\n            <div class=\"form-group\">\n                <label for=\"last_name\">Last Name</label>\n                <input type=\"text\" class=\"form-control\" name=\"last_name\" placeholder=\"Last Name\" required autofocus [(ngModel)]=\"registration.last_name\">\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"bio\">Bio.</label>\n                <textarea type=\"text\" class=\"form-control\" name=\"bio\" placeholder=\"Bio.\" required autofocus [(ngModel)]=\"registration.bio\"></textarea>\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"team\">Team</label>\n                <input type=\"text\" class=\"form-control\" name=\"team\" placeholder=\"Team\" required autofocus [(ngModel)]=\"registration.team\">\n            </div>\n        </div>\n\n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"age\">Age</label>\n                <input type=\"number\" class=\"form-control\" name=\"age\" placeholder=\"Number\" required autofocus [(ngModel)]=\"registration.age\"\n                    (ngModelChange)=\"selectCategoryTriggerChange()\">\n            </div>\n        </div>\n\n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"sex\">Sex</label>\n                <select name=\"sex\" class=\"form-control\" required [(ngModel)]=\"registration.sex\" (ngModelChange)=\"selectCategoryTriggerChange()\">\n                    <option *ngFor=\"let s of sexes\" [ngValue]=\"s\">{{s.name}}</option>\n                </select>\n            </div>\n        </div>\n\n        <div class=\"col-md-4\">\n            <div class=\"form-group\">\n                <label for=\"category\">Category</label>\n                <select name=\"category\" class=\"form-control\" required [(ngModel)]=\"registration.category\">\n                    <option *ngFor=\"let c of categories_cb\" [ngValue]=\"c\">{{c.name}} {{c.age_1}}-{{c.age_2}} años {{c.sex == 0 ?'MALE':'FEMALE'}}</option>\n                </select>\n            </div>\n        </div>\n\n        <div class=\"col-md-6\">\n            <button [routerLink]=\"['/competitions']\" class=\"btn btn-block btn-default\">\n                <i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> Cancel</button>\n        </div>\n\n        <div class=\"col-md-6\">\n            <button type=\"submit\" class=\"btn btn-block btn-primary\">\n                <i class=\"fa fa-upload\" aria-hidden=\"true\"></i> Submit</button>\n        </div>\n    </div>\n</form>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/competitions/competitions.results.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-12\" *ngIf=\"competition && competition.competition_type.value == 1 && calc_done\">\n        <table class=\"table table-sm table-bordered table-responsive\">\n            <thead class=\"thead-inverse\">\n                <tr>\n                    <th colspan=\"3\"></th>\n                    <th colspan=\"3\" class=\"table-info\">Day 1</th>\n                    <th class=\"table-danger\">Day 2</th>\n                    <th class=\"table-success\">Day 3</th>\n                    <th colspan=\"4\">Totals</th>\n                </tr>\n                <tr>\n                    <th>#</th>\n                    <th>Name</th>\n                    <th>Category</th>\n                    <th class=\"table-info\">\n                        Natación\n                    </th>\n                    <th class=\"table-info\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-info\">\n                        Total\n                    </th>\n                    <th class=\"table-danger\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-success\">\n                        Carrera\n                    </th>\n                    <th>\n                        <i class=\"fa fa-tint\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-bicycle\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-road\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>Global</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td>{{reg.category.name}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.totals[1]}}</td>\n                    <td>{{reg.total_day_1}}</td>\n                    <td>{{reg.totals[2]}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.total_cycling}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions']\">Competitions</a>\n        </li>\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions/detail', competition._id]\">{{competition.name}} [detail]</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Results</li>\n    </ol>\n</nav>\n    \n<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-12\" *ngIf=\"competition && competition.competition_type.value == 1 && calc_done\">\n        <table class=\"table table-sm table-hover table-bordered table-responsive\">\n            <thead>\n                <tr>\n                    <th colspan=\"3\"></th>\n                    <th colspan=\"3\" class=\"table-info\">Day 1</th>\n                    <th class=\"table-danger\">Day 2</th>\n                    <th class=\"table-success\">Day 3</th>\n                    <th colspan=\"4\">Totals</th>\n                </tr>\n                <tr>\n                    <th>#</th>\n                    <th>Name</th>\n                    <th>Category</th>\n                    <th class=\"table-info\">\n                        Natación\n                    </th>\n                    <th class=\"table-info\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-info\">\n                        Total\n                    </th>\n                    <th class=\"table-danger\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-success\">\n                        Carrera\n                    </th>\n                    <th>\n                        <i class=\"fa fa-tint\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-bicycle\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-road\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>Global</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td>{{reg.category.name}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.totals[1]}}</td>\n                    <td>{{reg.total_day_1}}</td>\n                    <td>{{reg.totals[2]}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.total_cycling}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1723,6 +1728,7 @@ var CompetitionsResultsComponent = (function () {
         this.router = router;
         this.activated_route = activated_route;
         this.calc_done = false;
+        this.errors = "";
         this.title = "Results";
     }
     // ng on init function
@@ -1752,11 +1758,10 @@ var CompetitionsResultsComponent = (function () {
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
             if (response.error) {
-                console.log(response.message);
+                _this.errors = response.message;
             }
             else {
                 _this.competition = response.data;
-                console.log(_this.competition);
             }
         });
     };
@@ -1769,6 +1774,7 @@ var CompetitionsResultsComponent = (function () {
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
             _this.registrations = response.data;
+            _this.registrations.forEach(function (r) { return r.original_rounds = r.rounds; });
             _this.calculateResults();
             if (_this.competition.competition_type.value == 1) {
                 _this.registrations.forEach(function (reg) {
@@ -1778,11 +1784,11 @@ var CompetitionsResultsComponent = (function () {
                     // Calculate cycling
                     reg.total_cycling = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](__WEBPACK_IMPORTED_MODULE_4_moment__["duration"](reg.totals[1]).asMilliseconds() + __WEBPACK_IMPORTED_MODULE_4_moment__["duration"](reg.totals[2]).asMilliseconds()).format("HH:mm:ss");
                 });
+                _this.sortResults();
             }
         });
     };
     CompetitionsResultsComponent.prototype.rangeOfStages = function (the_stages) {
-        console.log(the_stages);
         var numbers = [];
         the_stages.forEach(function (s) {
             for (var i = 0; i < s.rounds; i++) {
@@ -1801,7 +1807,17 @@ var CompetitionsResultsComponent = (function () {
             _this.competition.stages.forEach(function (stage) {
                 var start_time = _this.competition.start_times.find(function (st) { return st._id == stage.start_time; });
                 var the_start_time = __WEBPACK_IMPORTED_MODULE_4_moment__(start_time.date, "HH:mm:ss");
-                var filtered_rounds = reg.rounds.filter(function (round) { return round.stage == stage._id && round.time != "00:00:00"; });
+                if (_this.competition.competition_type.value == 1) {
+                    var l_s_1 = _this.getLastStageBrother(stage);
+                    if (l_s_1) {
+                        var last_rounds = reg.original_rounds.filter(function (round) { return round.stage == l_s_1._id && round.time != "00:00:00"; });
+                        var filtered_last_round = last_rounds[last_rounds.length - 1];
+                        if (filtered_last_round) {
+                            the_start_time = __WEBPACK_IMPORTED_MODULE_4_moment__(filtered_last_round.time, 'HH:mm:ss');
+                        }
+                    }
+                }
+                var filtered_rounds = reg.original_rounds.filter(function (round) { return round.stage == stage._id && round.time != "00:00:00"; });
                 var last_round = filtered_rounds[filtered_rounds.length - 1];
                 if (last_round) {
                     reg.totals.push(__WEBPACK_IMPORTED_MODULE_4_moment__["utc"](__WEBPACK_IMPORTED_MODULE_4_moment__(last_round.time, "HH:mm:ss").diff(the_start_time)).format("HH:mm:ss"));
@@ -1810,12 +1826,10 @@ var CompetitionsResultsComponent = (function () {
                     reg.totals.push("00:00:00");
                 }
             });
-            //reg.total = reg.totals.reduce( ( a, b ) => ( moment.utc( moment.duration( a ).add( moment.duration( b ) ).asMilliseconds() ).format( "HH:mm:ss" ) ), "00:00:00" )
             reg.total = 0;
             var start = true;
             var start_day = 0;
             reg.totals.forEach(function (total) {
-                //reg.total = moment.utc( moment.duration( reg.total ).add( moment.duration( total ) ).asMilliseconds() ).format( "HH:mm:ss" )
                 reg.total += __WEBPACK_IMPORTED_MODULE_4_moment__["duration"](total).asMilliseconds();
                 if (start) {
                     start_day = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).days();
@@ -1825,10 +1839,45 @@ var CompetitionsResultsComponent = (function () {
             var m = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).minutes() < 10 ? '0' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).minutes() : __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).minutes();
             var h = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).hours() < 10 ? '0' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).hours() : '' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).hours();
             var s = __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).seconds() < 10 ? '0' + __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).seconds() : __WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).seconds();
-            console.log((parseInt(h) * (__WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).days() - start_day)) + ":" + m + ":" + s);
-            reg.total = (parseInt(h) + (24 * (__WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).days() - start_day))) + ":" + m + ":" + s;
+            var t_h = (parseInt(h) + (24 * (__WEBPACK_IMPORTED_MODULE_4_moment__["utc"](reg.total).days() - start_day)));
+            h = t_h < 10 ? '0' + t_h : '' + t_h;
+            reg.total = h + ":" + m + ":" + s;
         });
         this.calc_done = true;
+    };
+    // sort the results by first place
+    // @param none
+    // @return none
+    CompetitionsResultsComponent.prototype.sortResults = function () {
+        //this.registrations.sort( ( a, b ) => ( moment( b.total, "HH:mm:ss" ).diff( moment( a.total, "HH:mm:ss" ) ) ) )
+        this.registrations = this.registrations.filter(function (r) { return r.total != "00:00:00"; }).sort(function (a, b) {
+            var vars_a = a.total.split(":");
+            var vars_b = b.total.split(":");
+            if (parseInt(vars_a[0]) > parseInt(vars_b[0])) {
+                return 1;
+            }
+            else if (parseInt(vars_a[0]) == parseInt(vars_b[0])) {
+                if (parseInt(vars_a[1]) > parseInt(vars_b[1])) {
+                    return 1;
+                }
+                else if (parseInt(vars_a[1]) == parseInt(vars_b[1])) {
+                    if (parseInt(vars_a[2]) > parseInt(vars_b[2])) {
+                        return 1;
+                    }
+                    else if (parseInt(vars_a[2]) == parseInt(vars_b[2])) {
+                        return 0;
+                    }
+                }
+            }
+            return -1;
+        });
+    };
+    // Returns the last stage brother if there is one else null
+    // @param stage object
+    // @return stage object
+    CompetitionsResultsComponent.prototype.getLastStageBrother = function (stage) {
+        var rs = this.competition.stages.filter(function (s) { return s.start_time == stage.start_time; });
+        return rs.length == 2 && rs[rs.length - 1]._id == stage._id ? rs[rs.length - 2] : null;
     };
     return CompetitionsResultsComponent;
 }());
@@ -1848,7 +1897,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/competitions/competitions.stage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n<div class=\"row\"  *ngIf=\"competition\">\n    <div class=\"col-md-12\">\n        <ul class=\"nav justify-content-end\">\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/competitions/detail', competition._id]\" href=\"\">Go Back</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" (click)=\"saveRounds()\" href=\"javascript:void(0)\">Save</a>\n            </li>\n        </ul>\n    </div>\n</div>\n<br>\n<div class=\"row\" *ngIf=\"registrations && rounds\">\n    <div class=\"col-md-12\">\n        <table class=\"table table-sm table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>#</th>\n                    <th>Name</th>\n                    <th *ngFor=\"let i of rounds\">{{i}}</th>\n                    <th>Total</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td *ngFor=\"let round of reg.rounds; let i = index\">\n                        <div contenteditable=\"true\"\n                            [textContent]=\"reg.rounds[i].time\"\n                            (input)=\"reg.rounds[i].time = $event.target.textContent\"></div>\n                    </td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions']\">Competitions</a>\n        </li>\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions/detail', competition._id]\">{{competition.name}} [detail]</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\" *ngIf=\"stage\" >{{stage.name}} [stage]</li>\n    </ol>\n</nav>\n\n<h2>{{title}}</h2>\n<div class=\"row\"  *ngIf=\"competition\">\n    <div class=\"col-md-12\">\n        <ul class=\"nav justify-content-end\">\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/competitions/detail', competition._id]\" href=\"javascript:void(0)\"><i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> Go Back</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" (click)=\"saveRounds()\" href=\"javascript:void(0)\"><i class=\"fa fa-floppy-o\" aria-hidden=\"true\"></i> Save</a>\n            </li>\n        </ul>\n    </div>\n</div>\n<br>\n<div class=\"row\" *ngIf=\"registrations && rounds\">\n    <div class=\"col-md-12\">\n        <table class=\"table table-sm table-hover table-bordered table-responsive\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>#</th>\n                    <th>Name</th>\n                    <th *ngFor=\"let i of rounds\">{{i}}</th>\n                    <th>Total</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td *ngFor=\"let round of reg.rounds; let i = index\">\n                        <div contenteditable=\"true\"\n                            [textContent]=\"reg.rounds[i].time\"\n                            (input)=\"reg.rounds[i].time = $event.target.textContent\"></div>\n                    </td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1959,6 +2008,7 @@ var CompetitionsStageComponent = (function () {
             .subscribe(function (response) {
             if (!response.error) {
                 _this.registrations = response.data;
+                _this.registrations.forEach(function (r) { return r.original_rounds = r.rounds; });
                 _this.calculateResults();
             }
             else {
@@ -1975,7 +2025,7 @@ var CompetitionsStageComponent = (function () {
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
             console.log("This was saved on registration; Server says " + response.message + ".");
-            _this.calculateResults();
+            _this.getAllRegistrations();
         });
     };
     // calculate results
@@ -1986,8 +2036,18 @@ var CompetitionsStageComponent = (function () {
         var _this = this;
         var the_start_time = __WEBPACK_IMPORTED_MODULE_5_moment__(this.start_time.date, 'HH:mm:ss');
         this.registrations.forEach(function (r) {
-            r.rounds = r.rounds.filter(function (round) { return round.stage == _this.stage_id; });
-            var filtered_rounds = r.rounds.filter(function (round) { return round.time != "00:00:00"; });
+            if (_this.competition.competition_type.value == 1) {
+                var l_s_1 = _this.getLastStageBrother(_this.stage);
+                if (l_s_1) {
+                    var last_rounds = r.original_rounds.filter(function (round) { return round.stage == l_s_1._id && round.time != "00:00:00"; });
+                    var filtered_last_round = last_rounds[last_rounds.length - 1];
+                    if (filtered_last_round) {
+                        the_start_time = __WEBPACK_IMPORTED_MODULE_5_moment__(filtered_last_round.time, 'HH:mm:ss');
+                    }
+                }
+            }
+            r.rounds = r.original_rounds.filter(function (round) { return round.stage == _this.stage_id; });
+            var filtered_rounds = r.rounds.filter(function (round) { return (round.stage == _this.stage_id && round.time != "00:00:00"); });
             var last_round = filtered_rounds[filtered_rounds.length - 1];
             if (last_round) {
                 r.total = __WEBPACK_IMPORTED_MODULE_5_moment__["utc"](__WEBPACK_IMPORTED_MODULE_5_moment__(last_round.time, "HH:mm:ss").diff(the_start_time)).format("HH:mm:ss");
@@ -1996,6 +2056,13 @@ var CompetitionsStageComponent = (function () {
                 r.total = "00:00:00";
             }
         });
+    };
+    // Returns the last stage brother if there is one else null
+    // @param stage object
+    // @return stage object
+    CompetitionsStageComponent.prototype.getLastStageBrother = function (stage) {
+        var rs = this.competition.stages.filter(function (s) { return s.start_time == stage.start_time; });
+        return rs.length == 2 && rs[rs.length - 1]._id == stage._id ? rs[rs.length - 2] : null;
     };
     return CompetitionsStageComponent;
 }());
@@ -2102,7 +2169,7 @@ var _a;
 /***/ "../../../../../src/app/menu/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-inverse fixed-top custom_navbar\">\n    <button class=\"navbar-toggler navbar-toggler-right hidden-lg-up\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\n        aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n    <a class=\"navbar-brand\" href=\"/\">Race Control System</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"/settings\">Settings</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"/help\">Help</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"\" (click)=\"logout()\">logout</a>\n            </li>\n        </ul>\n        <form class=\"form-inline mt-2 mt-md-0\">\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n        </form>\n    </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-inverse fixed-top custom_navbar\">\n    <button class=\"navbar-toggler navbar-toggler-right hidden-lg-up\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\n        aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n    <a class=\"navbar-brand\" href=\"/\">Race Control System</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/settings']\">Settings</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/help']\">Help</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"\" (click)=\"logout()\">Logout</a>\n            </li>\n        </ul>\n        <form class=\"form-inline mt-2 mt-md-0\">\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n        </form>\n    </div>\n</nav>"
 
 /***/ }),
 
@@ -2140,12 +2207,8 @@ var NavBarComponent = (function () {
         // @params none
         // @returns none
         this.logout = function () {
-            _this.auth_service.logout()
-                .map(function (res) { return res.json(); })
-                .subscribe(function (response) {
-                _this.router.navigateByUrl('/login');
-                console.log("Log out succesful");
-            });
+            _this.auth_service.logout();
+            _this.router.navigateByUrl('/login');
         };
     }
     return NavBarComponent;
@@ -2228,6 +2291,43 @@ SideBarComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=sidebar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/settings/help.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"display-4\">{{title}}</h2>\n<div class=\"row\">\n    <div class=\"col-md-4\">\n        \n    </div>\n    <div class=\"col-md-8\">\n        <div class=\"col-md-12\">\n            <h3>Competitions</h3>\n            <hr>\n            <p>Competitions.... .. .. .. .</p>\n        </div>\n        <div class=\"col-md-12\">\n            <h3>Categories</h3>\n            <hr>\n            <p>Categories are used for set your competitors in diferent areas of the competition.</p>\n            <p>Make sure you add categories before adding competitors, as you know it is needed for making a registration.</p>\n        </div>\n        <div class=\"col-md-12\">\n            <h3>Registrations</h3>\n            <hr>\n            <p>When creating a competition, you have now the choice for adding registers on the database; each register is a\n                diferent competitor and everytime you add another you have a continous competitor number which is the one\n                you add to the competitor's tag.</p>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/settings/help.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var HelpComponent = (function () {
+    function HelpComponent() {
+        this.title = "Help";
+    }
+    return HelpComponent;
+}());
+HelpComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'help',
+        template: __webpack_require__("../../../../../src/app/settings/help.component.html")
+    })
+], HelpComponent);
+
+//# sourceMappingURL=help.component.js.map
 
 /***/ }),
 
