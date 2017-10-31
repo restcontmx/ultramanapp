@@ -1,0 +1,76 @@
+<nav aria-label="breadcrumb" role="navigation" *ngIf="registration">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions']">Competitions</a>
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions/detail', registration.competition._id]">{{registration.competition.name}} [detail]</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{registration.first_name}} {{registration.last_name}} [detail]</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert" *ngIf="errors">
+            {{errors}}
+        </div>
+        <div class="alert alert-warning" role="alert" *ngIf="messages">
+            {{messages}}
+        </div>
+    </div>
+</div>
+
+<form (ngSubmit)="update()">
+    <div class="row" *ngIf="registration">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label for="competition_number"></label>
+                <input type="number" class="form-control" name="no" placeholder="No." required autofocus [(ngModel)]="registration.competitor_number">
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" name="first_name" placeholder="First Name" required autofocus [(ngModel)]="registration.first_name">
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" name="last_name" placeholder="Last Name" required autofocus [(ngModel)]="registration.last_name">
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="bio">Bio.</label>
+                <textarea type="text" class="form-control" name="bio" placeholder="Bio." required autofocus [(ngModel)]="registration.bio"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="team">Team</label>
+                <input type="text" class="form-control" name="team" placeholder="Team" required autofocus [(ngModel)]="registration.team">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <button (click)="disqualified()" class="btn btn-block btn-danger">
+                <i class="fa fa-times-circle" aria-hidden="true"></i> Disqualified</button>
+        </div>
+
+        <div class="col-md-4">
+            <button [routerLink]="['/competitions/detail', registration.competition._id]" class="btn btn-block btn-default">
+                <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Cancel</button>
+        </div>
+
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-block btn-primary">
+                <i class="fa fa-upload" aria-hidden="true"></i> Submit</button>
+        </div>
+    </div>
+</form>

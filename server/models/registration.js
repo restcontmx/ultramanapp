@@ -13,7 +13,8 @@ var RegistrationSchema = new mongoose.Schema({
     category: { type: ObjectIdSchema, ref: 'Category' },
     competition : { type: ObjectIdSchema, ref: 'Competition' },
     timestamp: { type: Date, default: Date.now },
-    rounds: [ { type: ObjectIdSchema, ref: 'Round' } ]
+    rounds: [ { type: ObjectIdSchema, ref: 'Round' } ],
+    disqualified : { type : Boolean, default: false }
 });
 
 module.exports = mongoose.model( 'Registration', RegistrationSchema );

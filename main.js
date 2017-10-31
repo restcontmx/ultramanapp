@@ -18,8 +18,9 @@ const stage_type = require( './server/routes/stage_type' )
 const round = require( './server/routes/round' )
 const start_time = require( './server/routes/start_time' )
 const auth = require( './server/routes/auth' )
+const competitor = require( './server/routes/competitor' )
 
-mongoose.connect('mongodb://localhost:27017/ultraman');
+mongoose.connect('mongodb://localhost:27017/racesystem');
 
 api.use( bodyParser.json() );
 api.use( bodyParser.urlencoded( { extended: false } ) );
@@ -36,6 +37,7 @@ api.use( '/api/stage_type/', stage_type )
 api.use( '/api/round/', round )
 api.use( '/api/start_time/', start_time )
 api.use( '/api/auth/', auth )
+api.use( '/api/competitor/', competitor )
 
 api.get( '*', ( req, res ) => {
     res.sendFile( path.join( __dirname, 'dist_angular/index.html' ) );
@@ -56,7 +58,9 @@ let mainWindow
 
 function createWindow () {
 
-    mainWindow = new BrowserWindow( { fullscreen : true } )
+    mainWindow = new BrowserWindow()
+    mainWindow.maximize()
+
     mainWindow.loadURL( 'http://localhost:3456' )
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()

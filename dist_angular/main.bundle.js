@@ -89,28 +89,33 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__menu_navbar_component__ = __webpack_require__("../../../../../src/app/menu/navbar.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__menu_sidebar_component__ = __webpack_require__("../../../../../src/app/menu/sidebar.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__auth_login_component__ = __webpack_require__("../../../../../src/app/auth/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_alwaysonwarth_service__ = __webpack_require__("../../../../../src/app/auth/alwaysonwarth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__competitions_competition_service__ = __webpack_require__("../../../../../src/app/competitions/competition.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_list_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_new_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.new.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__competitions_competition_registration_component__ = __webpack_require__("../../../../../src/app/competitions/competition.registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_results_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.results.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__competitions_competitions_stage_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.stage.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__categories_category_service__ = __webpack_require__("../../../../../src/app/categories/category.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__categories_categories_component__ = __webpack_require__("../../../../../src/app/categories/categories.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__categories_categories_list_component__ = __webpack_require__("../../../../../src/app/categories/categories.list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__categories_categories_new_component__ = __webpack_require__("../../../../../src/app/categories/categories.new.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__competition_types_competition_types_service__ = __webpack_require__("../../../../../src/app/competition_types/competition_types.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__competitions_registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__start_times_starttime_service__ = __webpack_require__("../../../../../src/app/start_times/starttime.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__settings_help_component__ = __webpack_require__("../../../../../src/app/settings/help.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime__ = __webpack_require__("../../../../ng-pick-datetime/picker.module.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_setup_component__ = __webpack_require__("../../../../../src/app/auth/setup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_alwaysonwarth_service__ = __webpack_require__("../../../../../src/app/auth/alwaysonwarth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__auth_issetted_service__ = __webpack_require__("../../../../../src/app/auth/issetted.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__competitions_competition_service__ = __webpack_require__("../../../../../src/app/competitions/competition.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_list_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__competitions_competitions_new_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.new.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_detail_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__competitions_competition_registration_component__ = __webpack_require__("../../../../../src/app/competitions/competition.registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__competitions_competitions_registration_detail_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.registration.detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__competitions_competitions_registration_edit_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.registration.edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__competitions_competitions_results_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.results.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__competitions_competitions_stage_component__ = __webpack_require__("../../../../../src/app/competitions/competitions.stage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__categories_category_service__ = __webpack_require__("../../../../../src/app/categories/category.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__categories_categories_component__ = __webpack_require__("../../../../../src/app/categories/categories.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__categories_categories_list_component__ = __webpack_require__("../../../../../src/app/categories/categories.list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__categories_categories_new_component__ = __webpack_require__("../../../../../src/app/categories/categories.new.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__categories_categories_detail_component__ = __webpack_require__("../../../../../src/app/categories/categories.detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__competition_types_competition_types_service__ = __webpack_require__("../../../../../src/app/competition_types/competition_types.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__competitions_registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__start_times_starttime_service__ = __webpack_require__("../../../../../src/app/start_times/starttime.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__settings_help_component__ = __webpack_require__("../../../../../src/app/settings/help.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ng_pick_datetime__ = __webpack_require__("../../../../ng-pick-datetime/picker.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ng_pick_datetime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_35_ng_pick_datetime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -149,11 +154,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
 var appRoutes = [
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__auth_login_component__["a" /* LoginComponent */] },
+    { path: 'setup',
+        component: __WEBPACK_IMPORTED_MODULE_11__auth_setup_component__["a" /* SetupComponent */]
+    },
+    { path: 'login',
+        component: __WEBPACK_IMPORTED_MODULE_10__auth_login_component__["a" /* LoginComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_13__auth_issetted_service__["a" /* IsSetted */]]
+    },
     {
         path: '', component: __WEBPACK_IMPORTED_MODULE_6__auth_dashboard_component__["a" /* DashboardComponent */],
-        canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */]],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_12__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */]],
         children: [
             {
                 path: '',
@@ -161,29 +177,32 @@ var appRoutes = [
             },
             {
                 path: 'competitions',
-                component: __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_component__["a" /* CompetitionsComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_component__["a" /* CompetitionsComponent */],
                 children: [
-                    { path: '', component: __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_list_component__["a" /* CompetitionsListComponent */] },
-                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */] },
-                    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
-                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
-                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
-                    { path: 'registration/:id', component: __WEBPACK_IMPORTED_MODULE_18__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */] },
-                    { path: 'results/:id', component: __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */] },
-                    { path: 'stage/:id/:stageId', component: __WEBPACK_IMPORTED_MODULE_20__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */] }
+                    { path: '', component: __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_list_component__["a" /* CompetitionsListComponent */] },
+                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_18__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */] },
+                    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
+                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
+                    { path: 'stage/:id', component: __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */] },
+                    { path: 'registration/:id', component: __WEBPACK_IMPORTED_MODULE_20__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */] },
+                    { path: 'registration/detail/:id', component: __WEBPACK_IMPORTED_MODULE_21__competitions_competitions_registration_detail_component__["a" /* RegistrationDetailComponent */] },
+                    { path: 'registration/edit/:id', component: __WEBPACK_IMPORTED_MODULE_22__competitions_competitions_registration_edit_component__["a" /* RegistrationEditComponent */] },
+                    { path: 'results/:id', component: __WEBPACK_IMPORTED_MODULE_23__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */] },
+                    { path: 'stage/:id/:stageId', component: __WEBPACK_IMPORTED_MODULE_24__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */] }
                 ]
             },
             {
                 path: 'categories',
-                component: __WEBPACK_IMPORTED_MODULE_22__categories_categories_component__["a" /* CategoriesComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_26__categories_categories_component__["a" /* CategoriesComponent */],
                 children: [
-                    { path: '', component: __WEBPACK_IMPORTED_MODULE_23__categories_categories_list_component__["a" /* CategoriesListComponent */] },
-                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_24__categories_categories_new_component__["a" /* CategoriesNewComponent */] }
+                    { path: '', component: __WEBPACK_IMPORTED_MODULE_27__categories_categories_list_component__["a" /* CategoriesListComponent */] },
+                    { path: 'new', component: __WEBPACK_IMPORTED_MODULE_28__categories_categories_new_component__["a" /* CategoriesNewComponent */] },
+                    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_29__categories_categories_detail_component__["a" /* CategoriesDetailComponent */] }
                 ]
             },
             {
                 path: 'help',
-                component: __WEBPACK_IMPORTED_MODULE_28__settings_help_component__["a" /* HelpComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_33__settings_help_component__["a" /* HelpComponent */]
             }
         ]
     },
@@ -202,37 +221,42 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9__menu_sidebar_component__["a" /* SideBarComponent */],
             __WEBPACK_IMPORTED_MODULE_6__auth_dashboard_component__["a" /* DashboardComponent */],
             __WEBPACK_IMPORTED_MODULE_10__auth_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__competitions_competitions_component__["a" /* CompetitionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__competitions_competitions_list_component__["a" /* CompetitionsListComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__categories_categories_component__["a" /* CategoriesComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__categories_categories_list_component__["a" /* CategoriesListComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__categories_categories_new_component__["a" /* CategoriesNewComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__auth_setup_component__["a" /* SetupComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__competitions_competitions_component__["a" /* CompetitionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__competitions_competitions_list_component__["a" /* CompetitionsListComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__competitions_competitions_new_component__["a" /* CompetitionsNewComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__competitions_competitions_detail_component__["a" /* CompetitionsDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__categories_categories_component__["a" /* CategoriesComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__categories_categories_list_component__["a" /* CategoriesListComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__categories_categories_new_component__["a" /* CategoriesNewComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__categories_categories_detail_component__["a" /* CategoriesDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__competitions_competition_registration_component__["a" /* CompetitionsRegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__competitions_competitions_registration_detail_component__["a" /* RegistrationDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__competitions_competitions_registration_edit_component__["a" /* RegistrationEditComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__competitions_competitions_results_component__["a" /* CompetitionsResultsComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__competitions_competitions_stage_component__["a" /* CompetitionsStageComponent */],
             __WEBPACK_IMPORTED_MODULE_7__auth_main_component__["a" /* MainComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__settings_help_component__["a" /* HelpComponent */]
+            __WEBPACK_IMPORTED_MODULE_33__settings_help_component__["a" /* HelpComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_29__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: false } // <-- debugging purposes only
+            __WEBPACK_IMPORTED_MODULE_34__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: false } // <-- debugging purposes only
             ),
-            __WEBPACK_IMPORTED_MODULE_31__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_36__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
-            __WEBPACK_IMPORTED_MODULE_30_ng_pick_datetime__["DateTimePickerModule"]
+            __WEBPACK_IMPORTED_MODULE_35_ng_pick_datetime__["DateTimePickerModule"]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_12__auth_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_14__auth_auth_service__["a" /* AuthService */],
             __WEBPACK_IMPORTED_MODULE_3_ngx_cookie_service__["a" /* CookieService */],
-            __WEBPACK_IMPORTED_MODULE_11__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_13__competitions_competition_service__["a" /* CompetitionService */],
-            __WEBPACK_IMPORTED_MODULE_25__competition_types_competition_types_service__["a" /* CompetitionTypeService */],
-            __WEBPACK_IMPORTED_MODULE_21__categories_category_service__["a" /* CategoryService */],
-            __WEBPACK_IMPORTED_MODULE_26__competitions_registration_service__["a" /* RegistrationService */],
-            __WEBPACK_IMPORTED_MODULE_27__start_times_starttime_service__["a" /* StartTimeService */]
+            __WEBPACK_IMPORTED_MODULE_12__auth_alwaysonwarth_service__["a" /* AlwaysAuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_13__auth_issetted_service__["a" /* IsSetted */],
+            __WEBPACK_IMPORTED_MODULE_15__competitions_competition_service__["a" /* CompetitionService */],
+            __WEBPACK_IMPORTED_MODULE_30__competition_types_competition_types_service__["a" /* CompetitionTypeService */],
+            __WEBPACK_IMPORTED_MODULE_25__categories_category_service__["a" /* CategoryService */],
+            __WEBPACK_IMPORTED_MODULE_31__competitions_registration_service__["a" /* RegistrationService */],
+            __WEBPACK_IMPORTED_MODULE_32__start_times_starttime_service__["a" /* StartTimeService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
@@ -356,6 +380,16 @@ var AuthService = (function () {
     AuthService.prototype.login = function (email, password) {
         return this.http_service.post('/api/auth/login', { 'email': email, 'password': password });
     };
+    // is machinne setted
+    // this will validate that this machinne is setted on the database
+    // @param none
+    // @return none
+    AuthService.prototype.isMachinneSetted = function () {
+        return this.http_service.get('/api/auth/issetted');
+    };
+    AuthService.prototype.register = function (data) {
+        return this.http_service.post('/api/auth/register', data);
+    };
     return AuthService;
 }());
 AuthService = __decorate([
@@ -444,6 +478,70 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/auth/issetted.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IsSetted; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var IsSetted = (function () {
+    // constructor function
+    // @param auth_service: Authentication service
+    // @param router: router service
+    // @returns none
+    function IsSetted(auth_service, router) {
+        this.auth_service = auth_service;
+        this.router = router;
+    }
+    // can activate
+    // Verification of the login
+    // @params none
+    // @returns boolean
+    IsSetted.prototype.canActivate = function () {
+        var _this = this;
+        return this.auth_service.isMachinneSetted()
+            .map(function (res) {
+            if (res.json().error) {
+                _this.router.navigateByUrl('/setup');
+                return false;
+            }
+            else {
+                if (res.json().valid) {
+                    return true;
+                }
+                else {
+                    _this.router.navigateByUrl('/setup');
+                    return false;
+                }
+            }
+        });
+    };
+    return IsSetted;
+}());
+IsSetted = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], IsSetted);
+
+var _a, _b;
+//# sourceMappingURL=issetted.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/auth/login.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -509,7 +607,8 @@ var LoginComponent = (function () {
                     .map(function (res) { return res.json(); })
                     .subscribe(function (response) {
                     if (!response.error) {
-                        localStorage.setItem("user_info", response.data);
+                        console.log(response.data);
+                        localStorage.setItem("user_info", JSON.stringify(response.data));
                         _this.router.navigateByUrl('/');
                     }
                     else {
@@ -540,7 +639,7 @@ var _a, _b;
 /***/ "../../../../../src/app/auth/main.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Welcome Ramiro Gutierrez Alaniz</h1>\n\n<div class=\"row\" *ngIf=\"competitions\">\n    <div class=\"col-md-12\" *ngFor=\"let competition of active_competitions\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4>On Course</h4>\n                <div class=\"row\">\n                    <div class=\"col-md-4\" *ngFor=\"let st of competition.start_times\">\n                        <h2 *ngIf=\"st.state\" class=\"display-2\">{{st.display}}</h2>\n                        <h2 *ngIf=\"!st.state\" class=\"display-4\">{{st.display}}</h2>\n                    </div>\n                </div>\n                <p>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i> Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-md-12\">\n        <h3></h3>\n    </div>\n    <div class=\"col-md-8\">\n\n    </div>\n    <div class=\"col-md-4\">\n\n    </div>\n</div>"
+module.exports = "<h1>Welcome {{user_info.first_name}} {{user_info.last_name}}</h1>\n\n<div class=\"row\" *ngIf=\"competitions\">\n    <div class=\"col-md-12\" *ngFor=\"let competition of active_competitions\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4>On Course</h4>\n                <div class=\"row\">\n                    <div class=\"col-md-4\" *ngFor=\"let st of competition.start_times\">\n                        <h2 *ngIf=\"st.state\" class=\"display-2\">{{st.display}}</h2>\n                        <h2 *ngIf=\"!st.state\" class=\"display-4\">{{st.display}}</h2>\n                    </div>\n                </div>\n                <p>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i> Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-md-12\">\n        <h3>Profile</h3>\n    </div>\n    <div class=\"col-md-4\">\n        <ul class=\"list-group\">\n            <li class=\"list-group-item\">First Name : {{user_info.first_name}}</li>\n            <li class=\"list-group-item\">Last Name : {{user_info.first_name}}</li>\n            <li class=\"list-group-item\">Email : {{user_info.email}}</li>\n            <li class=\"list-group-item\">UserName : {{user_info.username}}</li>\n            <li class=\"list-group-item\">Valid Key : {{user_info.key}} <small>Only for 3 computers.</small></li>\n        </ul>\n    </div>\n    <div class=\"col-md-8\">\n\n    </div>\n</div>"
 
 /***/ }),
 
@@ -589,6 +688,7 @@ var MainComponent = (function () {
     MainComponent.prototype.ngOnInit = function () {
         this.timer = __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable__["TimerObservable"].create(2000, 1000);
         this.getCompetitions();
+        this.user_info = JSON.parse(localStorage.getItem('user_info'));
     };
     // Ng on destroy
     // When view ends
@@ -637,6 +737,118 @@ MainComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=main.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/setup.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body {\n    padding-top: 40px;\n    padding-bottom: 40px;\n    background-color: #eee;\n}\n.container-fluid {\n    margin: 0px;\n    margin-top : -50px;\n}\n.form-signin {\n    max-width: 330px;\n    padding: 15px;\n    margin: 0 auto;\n}\n.form-signin .form-signin-heading,\n.form-signin .checkbox {\n    margin-bottom: 10px;\n}\n.form-signin .checkbox {\n    font-weight: normal;\n}\n.form-signin .form-control {\n    position: relative;\n    height: auto;\n    box-sizing: border-box;\n    padding: 10px;\n    font-size: 16px;\n}\n.form-signin .form-control:focus {\n    z-index: 2;\n}\n.form-signin input[type=\"email\"] {\n    margin-bottom: -1px;\n    border-bottom-right-radius: 0;\n    border-bottom-left-radius: 0;\n}\n\n.form-signin input[name=\"password\"] {\n    margin-bottom: -1px;\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    border-bottom-left-radius: 0;\n}\n\n.form-signin input[name=\"password2\"] {\n    margin-bottom: 10px;\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n}\n\n.form-signin input[name=\"first_name\"] {\n    margin-bottom: -1px;\n    border-bottom-right-radius: 0;\n    border-bottom-left-radius: 0;\n}\n\n.form-signin input[name=\"last_name\"] {\n    margin-bottom: 10px;\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n}\n\n.inside-container {\n    height: 100vh; \n}\n\n.left-window {\n    background-color: #042733;\n    color: #fff;\n    min-height: 100%;\n}\n\n.inside-window {\n    margin-left: 4%;\n    margin-top: 10%;\n    margin-right: 20%;\n}\n\n.inside-login {\n    margin-top: 30%;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/setup.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid inside-container\">\n    <div class=\"row inside-container\">\n        <div class=\"col-md-8 col-md-push-8 left-window\">\n            <div class=\"inside-window\">\n                <h1 class=\"display-1\">RestCont Race Control System</h1>\n                <h4 class=\"display-4\">Control your races and get instant results.</h4>\n                <small>For getting a valid key contact the administrator.</small>\n                <small>Each Key is for a maximum of three machines.</small>\n            </div>\n        </div>\n        <div class=\"col-md-4 col-md-pull-4\">\n            <div class=\"inside-login\">\n\n                <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"errors\">\n                    {{errors}}\n                </div>\n                <div class=\"alert alert-warning\" role=\"alert\" *ngIf=\"messages\">\n                    {{messages}}\n                </div>\n            \n                <form #reg=\"ngForm\" class=\"form-signin\" (ngSubmit)=\"register(reg)\">\n                    <h2 class=\"form-signin-heading\">Register</h2>\n                    <br>\n                    <label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n                    <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" name=\"email\" required ngModel>\n                    <label for=\"inputPassword\" class=\"sr-only\">Password</label>\n                    <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" name=\"password\" required ngModel>\n                    <label for=\"inputPassword2\" class=\"sr-only\">Repeat Password</label>\n                    <input type=\"password\" id=\"inputPassword2\" class=\"form-control\" placeholder=\"Repeat Password\" name=\"password2\" required ngModel>\n                    <hr>\n                    <label for=\"inputEmail\" class=\"sr-only\">First Name</label>\n                    <input type=\"text\" id=\"inputFirstName\" class=\"form-control\" placeholder=\"Firt Name\" name=\"first_name\" required ngModel>\n                    <label for=\"inputPassword\" class=\"sr-only\">Last Name</label>\n                    <input type=\"text\" id=\"inputLastName\" class=\"form-control\" placeholder=\"Last Name\" name=\"last_name\" required ngModel>\n                    <hr>\n                    <label for=\"inputKey\" class=\"sr-only\">Key License</label>\n                    <input type=\"text\" id=\"inputKey\" class=\"form-control\" placeholder=\"Key\" name=\"key\" required autofocus ngModel>\n\n                    <br>\n                    <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Register</button>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- /container -->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/setup.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SetupComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var SetupComponent = (function () {
+    // Constructor function
+    // @param authservice: authentication service
+    // @param router : router service
+    // @returns none
+    function SetupComponent(auth_service, router) {
+        var _this = this;
+        this.auth_service = auth_service;
+        this.router = router;
+        this.errors = "";
+        this.messages = "";
+        // Register function
+        // Register the form on the database
+        // @params none
+        // @returns void
+        this.register = function (reg) {
+            if (reg.valid && reg.value.password == reg.value.password2) {
+                var data = {
+                    user: {
+                        last_name: reg.value.last_name,
+                        first_name: reg.value.first_name,
+                        email: reg.value.email,
+                        password: reg.value.password,
+                        username: reg.value.email
+                    },
+                    mac_add: "",
+                    key: reg.value.key
+                };
+                _this.auth_service.register(data)
+                    .map(function (res) { return res.json(); })
+                    .subscribe(function (response) {
+                    if (!response.error) {
+                        if (response.code == 200) {
+                            _this.router.navigateByUrl('/login');
+                        }
+                        else if (response.code == 201) {
+                            _this.router.navigateByUrl('/login');
+                        }
+                    }
+                    else {
+                        _this.errors = response.message;
+                    }
+                });
+            }
+            else {
+                _this.errors = "Please verify the information is correct!";
+            }
+        };
+    }
+    return SetupComponent;
+}());
+SetupComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-setup',
+        template: __webpack_require__("../../../../../src/app/auth/setup.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/auth/setup.component.css")]
+    })
+    // Login component is the main login view
+    ,
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], SetupComponent);
+
+var _a, _b;
+//# sourceMappingURL=setup.component.js.map
 
 /***/ }),
 
@@ -693,10 +905,120 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/categories/categories.detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"category\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/categories']\">Categories</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">{{category.name}} [detail]</li>\n    </ol>\n</nav>\n<div class=\"row\">\n    <div class=\"col-md-12\">\n        <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"errors\">\n            {{errors}}\n        </div>\n        <div class=\"alert alert-warning\" role=\"alert\" *ngIf=\"messages\">\n            {{messages}}\n        </div>\n    </div>\n</div>\n<div class=\"row\" *ngIf=\"category\">\n    <div class=\"col-md-6\">\n        <ul class=\"list-group\">\n            <li class=\"list-group-item\"><b>Name :</b> {{category.name}}</li>\n            <li class=\"list-group-item\"><b>Description :</b> {{category.description}}</li>\n            <li class=\"list-group-item\"><b>Ages :</b> {{category.age_1}} - {{category.age_2}}</li>\n            <li class=\"list-group-item\"><b>Sex :</b> {{category.sex == 0 ? 'MALE' : 'FEMALE'}}</li>\n        </ul>\n    </div>\n    <div class=\"col-md-6\">\n        <div class=\"form-group\">\n            <label for=\"name\">Name</label>\n            <input  type=\"text\"\n                    class=\"form-control\"\n                    name=\"name\"\n                    placeholder=\"Name\"\n                    required autofocus \n                    [(ngModel)]=\"category.name\">\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"description\">Description</label>\n            <input  type=\"text\"\n                    class=\"form-control\"\n                    name=\"description\"\n                    placeholder=\"Description\"\n                    required autofocus\n                    [(ngModel)]=\"category.description\">\n        </div>\n    \n        <div class=\"form-group\">\n            <label for=\"age_1\">Age 1</label>\n            <input  type=\"number\"\n                    class=\"form-control\"\n                    name=\"age_1\"\n                    placeholder=\"Age 1\"\n                    required autofocus\n                    [(ngModel)]=\"category.age_1\"> \n        </div>         \n    \n        <div class=\"form-group\">\n            <label for=\"age_2\">Age 2</label>\n            <input  type=\"number\"\n                    class=\"form-control\"\n                    name=\"age_2\"\n                    placeholder=\"Age 2\"\n                    required autofocus \n                    [(ngModel)]=\"category.age_2\">\n        </div>         \n\n        <div class=\"form-group\">\n            <label for=\"age_2\">Sex</label>\n            <select name=\"sex\" class=\"form-control\" required [(ngModel)]=\"category.sex\">\n                <option value=\"0\">MALE</option>\n                <option value=\"1\">FEMALE</option>\n            </select>\n        </div>       \n        \n        \n    </div>\n\n    <div class=\"col-md-6\">\n        <button [routerLink]=\"['/categories']\" class=\"btn btn-block btn-default\"><i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> Cancel</button>    \n    </div>\n    <div class=\"col-md-6\">\n        <button class=\"btn btn-block btn-primary\" (click)=\"update()\"><i class=\"fa fa-upload\" aria-hidden=\"true\"></i> Submit</button>                    \n    </div>\n\n    <div class=\"col-md-12\">\n        <br>\n        <br>\n        <div class=\"alert alert-danger\" role=\"alert\">\n            <h4 class=\"alert-heading\">Danger Zone!</h4>\n            <p>If you remove this you may have a problem with your list of reports.</p>\n            <hr>\n            <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control\" placeholder=\"Write Category Name\" [(ngModel)]=\"delete_name\">\n            </div>\n            <button class=\"btn btn-block btn-danger\" (click)=\"delete()\">Delete</button>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/categories/categories.detail.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoriesDetailComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__category_service__ = __webpack_require__("../../../../../src/app/categories/category.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CategoriesDetailComponent = (function () {
+    // Constructor function
+    // @param service : competition service
+    // @param router : router service
+    // @param activated_route : Activated router service
+    function CategoriesDetailComponent(service, router, activated_route) {
+        this.service = service;
+        this.router = router;
+        this.activated_route = activated_route;
+    }
+    // Ng on init function of initialization
+    // @params none
+    // @returns none
+    CategoriesDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activated_route.params.subscribe(function (params) {
+            var id = params['id'];
+            _this.getCategory(id);
+        });
+    };
+    // Get category
+    // @params id : competition id string
+    // @returns none
+    CategoriesDetailComponent.prototype.getCategory = function (id) {
+        var _this = this;
+        this.service.detail(id)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (response.error) {
+                console.log("There was an error getting the category");
+            }
+            else {
+                _this.category = response.data;
+            }
+        });
+    };
+    CategoriesDetailComponent.prototype.update = function () {
+        var _this = this;
+        console.log(this.category);
+        this.service.update(this.category)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (!response.error) {
+                _this.messages = "Object updated.";
+            }
+            else {
+                _this.errors = "There was an error updating the object.";
+            }
+        });
+    };
+    CategoriesDetailComponent.prototype.delete = function () {
+        var _this = this;
+        if (this.delete_name == this.category.name) {
+            this.service.delete(this.category._id)
+                .map(function (res) { return res.json(); })
+                .subscribe(function (response) {
+                if (!response.error) {
+                    _this.router.navigateByUrl('/categories');
+                }
+                else {
+                    _this.errors = "There was an error deleting the object.";
+                }
+            });
+        }
+        else {
+            this.errors = "For deletion please tipe the right name.";
+        }
+    };
+    return CategoriesDetailComponent;
+}());
+CategoriesDetailComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'categories-detail',
+        template: __webpack_require__("../../../../../src/app/categories/categories.detail.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__category_service__["a" /* CategoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__category_service__["a" /* CategoryService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
+], CategoriesDetailComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=categories.detail.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/categories/categories.list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Categories</li>\n    </ol>\n</nav>\n<h2>{{title}}</h2>\n<hr>\n<table class=\"table table-inverse\">\n    <thead>\n        <tr>\n            <th>Name</th>\n            <th>Description</th>\n            <th>Age 1</th>\n            <th>Age 2</th>\n            <th>Edit</th>\n            <th>Delete</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let category of categories\">\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\">{{category.name}}</a></td>\n            <td>{{category.description}}</td>\n            <td>{{category.age_1}}</td>\n            <td>{{category.age_2}}</td>\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\"><button class=\"btn btn-block btn-warning\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></button></a></td>\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\"><button class=\"btn btn-block btn-danger\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></button></a></td>\n        </tr>\n    </tbody>\n</table>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Categories</li>\n    </ol>\n</nav>\n<h2>{{title}}</h2>\n<hr>\n<table class=\"table table-hover\">\n    <thead>\n        <tr>\n            <th>Name</th>\n            <th>Description</th>\n            <th>Age 1</th>\n            <th>Age 2</th>\n            <th>Edit</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let category of categories\">\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\">{{category.name}}</a></td>\n            <td>{{category.description}}</td>\n            <td>{{category.age_1}}</td>\n            <td>{{category.age_2}}</td>\n            <td><a [routerLink]=\"['/categories/detail/', category._id ]\"><button class=\"btn btn-block btn-warning\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></button></a></td>\n        </tr>\n    </tbody>\n</table>"
 
 /***/ }),
 
@@ -905,13 +1227,16 @@ var CategoryService = (function () {
     // @params data : a category
     // @returns Observable response
     CategoryService.prototype.update = function (data) {
-        return this.http_service.put("/api/category/" + data.id, data);
+        return this.http_service.put("/api/category/" + data._id, data);
     };
     // find by id category
     // @params id : number
     // @returns Observable response
     CategoryService.prototype.detail = function (id) {
         return this.http_service.get("/api/category/" + id);
+    };
+    CategoryService.prototype.delete = function (id) {
+        return this.http_service.delete("/api/category/" + id);
     };
     return CategoryService;
 }());
@@ -1271,7 +1596,7 @@ var _a;
 /***/ "../../../../../src/app/competitions/competitions.detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\"><a [routerLink]=\"['/competitions']\">Categories</a></li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">{{competition.name}} [detail]</li>\n    </ol>\n</nav>\n\n<div class=\"row\" *ngIf=\"competition\">\n    <div class=\"col-md-12\" *ngIf=\"errors\">\n        <div class=\"alert alert-danger\" role=\"alert\">\n            {{errors}}\n        </div>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4 *ngIf=\"!competition.isOn\">Not Running</h4>\n                <h4 *ngIf=\"competition.isOn\">On Course</h4>\n                <p>\n                    <button type=\"button\" class=\"btn btn-warning\" [routerLink]=\"['/competitions/edit', competition._id]\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i> Edit</button>\n                    <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/competitions/registration', competition._id]\"><i class=\"fa fa-address-card-o\" aria-hidden=\"true\"></i> Register</button>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i> Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n    <hr>    \n    <div class=\"col-md-4\">\n        <h3>Stages</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-danger\">\n                    <th>Stage</th>\n                    <th>Checks</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let s of competition.stages\" [routerLink]=\"['/competitions/stage', competition._id, s._id ]\">\n                    <td>{{s.name}}</td>\n                    <td>{{s.rounds}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <div class=\"col-md-8\">\n        <h3>Start Times</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>Day</th>\n                    <th>State</th>                    \n                    <th>Time</th>\n                    <th>Custom Start</th>\n                    <th>Quick Start</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let st of competition.start_times; let i = index\">\n                    <td>{{st.name}}</td>\n                    <td>{{st.state? 'ON' : 'OFF' }}</td>\n                    <td>\n                        <div contenteditable=\"true\"\n                            [textContent]=\"competition.start_times[i].date\"\n                            (input)=\"competition.start_times[i].date = $event.target.textContent\">00:00:00</div>    \n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-success\" *ngIf=\"!st.state\" (click)=\"start(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-info\" *ngIf=\"!st.state\" (click)=\"quickStart(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <hr>\n    <div class=\"col-md-12\">\n        <h3>Competitors</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-info\">\n                    <th>No.</th>\n                    <th>Name</th>\n                    <th>Team</th>\n                    <th>Category</th>\n                    <th>Age</th>\n                    <th>Sex</th>\n                    <th>Edit</th>\n                    <th>Delete</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let registration of registrations\">\n                    <td>{{registration.competitor_number}}</td>\n                    <td>{{registration.first_name}} {{registration.last_name}}</td>\n                    <td>{{registration.team}}</td>\n                    <td>{{registration.category.name}}</td>\n                    <td>{{registration.age}}</td>\n                    <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>\n                    <td>\n                        <a href=\"\" [routerLink]=\"['/registration/detail/', registration._id ]\">\n                            <button class=\"btn btn-block btn-warning\">\n                                <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                    <td>\n                        <a (click)=\"delete( registration._id )\">\n                            <button class=\"btn btn-block btn-danger\">\n                                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\"><a [routerLink]=\"['/competitions']\">Categories</a></li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">{{competition.name}} [detail]</li>\n    </ol>\n</nav>\n\n<div class=\"row\" *ngIf=\"competition\">\n    <div class=\"col-md-12\" *ngIf=\"errors\">\n        <div class=\"alert alert-danger\" role=\"alert\">\n            {{errors}}\n        </div>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"jumbotron jumbotron-fluid text-center\">\n            <div class=\"container text-center\">\n                <h1 class=\"display-3\">{{competition.name}}</h1>\n                <p class=\"lead\">{{competition.description}}</p>\n                <p>Type : <span class=\"badge badge-pill badge-info\">{{competition.competition_type.name}}</span> | Date : <span class=\"badge badge-pill badge-success\">{{competition.start_date | date : 'MM/dd/y H:mm:ss'}}</span></p>\n                <h4 *ngIf=\"!competition.isOn\">Not Running</h4>\n                <h4 *ngIf=\"competition.isOn\">On Course</h4>\n                <p>\n                    <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/competitions/registration', competition._id]\"><i class=\"fa fa-address-card-o\" aria-hidden=\"true\"></i> Register</button>\n                    <button type=\"button\" class=\"btn btn-info\" [routerLink]=\"['/competitions/results', competition._id]\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i> Results</button>\n                </p>\n            </div>\n        </div>\n    </div>\n    <hr>    \n    <div class=\"col-md-4\">\n        <h3>Stages</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-danger\">\n                    <th>Stage</th>\n                    <th>Checks</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let s of competition.stages\" [routerLink]=\"['/competitions/stage', competition._id, s._id ]\">\n                    <td>{{s.name}}</td>\n                    <td>{{s.rounds}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <div class=\"col-md-8\">\n        <h3>Start Times</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-success\">\n                    <th>Day</th>\n                    <th>State</th>                    \n                    <th>Time</th>\n                    <th>Custom Start</th>\n                    <th>Quick Start</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let st of competition.start_times; let i = index\">\n                    <td>{{st.name}}</td>\n                    <td>{{st.state? 'ON' : 'OFF' }}</td>\n                    <td>\n                        <div contenteditable=\"true\"\n                            [textContent]=\"competition.start_times[i].date\"\n                            (input)=\"competition.start_times[i].date = $event.target.textContent\">00:00:00</div>    \n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-success\" *ngIf=\"!st.state\" (click)=\"start(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                    <td>\n                        <button class=\"btn btn-sm btn-info\" *ngIf=\"!st.state\" (click)=\"quickStart(st)\" [disabled]=\"!st.active\">Start</button>\n                        <button class=\"btn btn-sm btn-danger\" *ngIf=\"st.state\" (click)=\"stopSartTime(st)\" >Stop</button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <hr>\n    <div class=\"col-md-12\">\n        <h3>Competitors</h3>\n        <table class=\"table table-hover\">\n            <thead>\n                <tr class=\"table-info\">\n                    <th>No.</th>\n                    <th>Name</th>\n                    <th>Team</th>\n                    <th>Category</th>\n                    <th>Age</th>\n                    <th>Sex</th>\n                    <th>Edit</th>\n                    <th>Delete</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let registration of registrations\">\n                    <td>{{registration.competitor_number}}</td>\n                    <td><a [routerLink]=\"['/competitions/registration/detail', registration._id ]\">{{registration.first_name}} {{registration.last_name}}</a></td>\n                    <td>{{registration.team}}</td>\n                    <td>{{registration.category.name}}</td>\n                    <td>{{registration.age}}</td>\n                    <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>\n                    <td>\n                        <a href=\"\" [routerLink]=\"['/competitions/registration/edit', registration._id ]\">\n                            <button class=\"btn btn-block btn-warning\">\n                                <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                    <td>\n                        <a (click)=\"delete( registration._id )\">\n                            <button class=\"btn btn-block btn-danger\">\n                                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>\n                            </button>\n                        </a>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1686,10 +2011,278 @@ module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"com
 
 /***/ }),
 
+/***/ "../../../../../src/app/competitions/competitions.registration.detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"register\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions/detail', register.competition._id ]\">Competition</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">{{register.first_name}} [detail]</li>\n    </ol>\n</nav>\n<div class=\"row\">\n    <div class=\"col-md-12\">\n        <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"errors\">\n            {{errors}}\n        </div>\n        <div class=\"alert alert-warning\" role=\"alert\" *ngIf=\"messages\">\n            {{messages}}\n        </div>\n    </div>\n</div>\n<div class=\"row\" *ngIf=\"register\">\n    <div class=\"col-md-6\">\n        <ul class=\"list-group\">\n            <li class=\"list-group-item\">\n                <b>Number : </b> {{register.competitor_number}}</li>\n            <li class=\"list-group-item\">\n                <b>Name : </b> {{register.first_name}} {{register.last_name}}</li>\n            <li class=\"list-group-item\">\n                <b>Category : </b> {{register.category.name}}</li>\n            <li class=\"list-group-item\">\n                <b>Age : </b> {{register.age}}</li>\n            <li class=\"list-group-item\">\n                <b>Sex : </b> {{register.sex == 0 ? 'MALE' : 'FEMALE'}}</li>\n        </ul>\n    </div>\n    <div class=\"col-md-6\">\n\n    </div>\n\n    <div class=\"col-md-6\">\n        <button [routerLink]=\"['/competitions/detail', register.competition._id]\" class=\"btn btn-block btn-default\">\n            <i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> Cancel</button>\n    </div>\n\n    <div class=\"col-md-12\">\n        <br>\n        <br>\n        <div class=\"alert alert-danger\" role=\"alert\">\n            <h4 class=\"alert-heading\">Danger Zone!</h4>\n            <p>If you remove this you may have a problem with your list of reports.</p>\n            <hr>\n            <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control\" placeholder=\"Write Competitors Name\" [(ngModel)]=\"delete_name\">\n            </div>\n            <button class=\"btn btn-block btn-danger\" (click)=\"delete()\">Delete</button>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/competitions/competitions.registration.detail.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistrationDetailComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RegistrationDetailComponent = (function () {
+    // Constructor function
+    // @param service : competition service
+    // @param router : router service
+    // @param activated_route : Activated router service
+    function RegistrationDetailComponent(service, router, activated_route) {
+        this.service = service;
+        this.router = router;
+        this.activated_route = activated_route;
+    }
+    // Ng on init function of initialization
+    // @params none
+    // @returns none
+    RegistrationDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activated_route.params.subscribe(function (params) {
+            var id = params['id'];
+            _this.getRegister(id);
+        });
+    };
+    // Get register
+    // @params id : competition id string
+    // @returns none
+    RegistrationDetailComponent.prototype.getRegister = function (id) {
+        var _this = this;
+        this.service.detail(id)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (response.error) {
+                _this.errors = "There was an error getting the register";
+            }
+            else {
+                _this.register = response.data;
+            }
+        });
+    };
+    RegistrationDetailComponent.prototype.delete = function () {
+        var _this = this;
+        if (this.delete_name == (this.register.first_name + ' ' + this.register.last_name)) {
+            this.service.delete(this.register._id)
+                .map(function (res) { return res.json(); })
+                .subscribe(function (response) {
+                if (!response.error) {
+                    _this.router.navigateByUrl('/competitions/detail/' + _this.register.competition._id);
+                }
+                else {
+                    _this.errors = "There was an error deleting the object.";
+                }
+            });
+        }
+        else {
+            this.errors = "For deletion please tipe the right name.";
+        }
+    };
+    return RegistrationDetailComponent;
+}());
+RegistrationDetailComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'competitions-registration-detail',
+        template: __webpack_require__("../../../../../src/app/competitions/competitions.registration.detail.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__registration_service__["a" /* RegistrationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__registration_service__["a" /* RegistrationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
+], RegistrationDetailComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=competitions.registration.detail.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/competitions/competitions.registration.edit.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"registration\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions']\">Competitions</a>\n        </li>\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions/detail', registration.competition._id]\">{{registration.competition.name}} [detail]</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">{{registration.first_name}} {{registration.last_name}} [detail]</li>\n    </ol>\n</nav>\n\n<div class=\"row\">\n    <div class=\"col-md-12\">\n        <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"errors\">\n            {{errors}}\n        </div>\n        <div class=\"alert alert-warning\" role=\"alert\" *ngIf=\"messages\">\n            {{messages}}\n        </div>\n    </div>\n</div>\n\n<form (ngSubmit)=\"update()\">\n    <div class=\"row\" *ngIf=\"registration\">\n        <div class=\"col-md-2\">\n            <div class=\"form-group\">\n                <label for=\"competition_number\"></label>\n                <input type=\"number\" class=\"form-control\" name=\"no\" placeholder=\"No.\" required autofocus [(ngModel)]=\"registration.competitor_number\">\n            </div>\n        </div>\n\n        <div class=\"col-md-5\">\n            <div class=\"form-group\">\n                <label for=\"first_name\">First Name</label>\n                <input type=\"text\" class=\"form-control\" name=\"first_name\" placeholder=\"First Name\" required autofocus [(ngModel)]=\"registration.first_name\">\n            </div>\n        </div>\n\n        <div class=\"col-md-5\">\n            <div class=\"form-group\">\n                <label for=\"last_name\">Last Name</label>\n                <input type=\"text\" class=\"form-control\" name=\"last_name\" placeholder=\"Last Name\" required autofocus [(ngModel)]=\"registration.last_name\">\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"bio\">Bio.</label>\n                <textarea type=\"text\" class=\"form-control\" name=\"bio\" placeholder=\"Bio.\" required autofocus [(ngModel)]=\"registration.bio\"></textarea>\n            </div>\n        </div>\n\n        <div class=\"col-md-12\">\n            <div class=\"form-group\">\n                <label for=\"team\">Team</label>\n                <input type=\"text\" class=\"form-control\" name=\"team\" placeholder=\"Team\" required autofocus [(ngModel)]=\"registration.team\">\n            </div>\n        </div>\n\n        <div class=\"col-md-4\">\n            <button (click)=\"disqualified()\" class=\"btn btn-block btn-danger\">\n                <i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i> Disqualified</button>\n        </div>\n\n        <div class=\"col-md-4\">\n            <button [routerLink]=\"['/competitions/detail', registration.competition._id]\" class=\"btn btn-block btn-default\">\n                <i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> Cancel</button>\n        </div>\n\n        <div class=\"col-md-4\">\n            <button type=\"submit\" class=\"btn btn-block btn-primary\">\n                <i class=\"fa fa-upload\" aria-hidden=\"true\"></i> Submit</button>\n        </div>\n    </div>\n</form>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/competitions/competitions.registration.edit.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistrationEditComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__categories_category_service__ = __webpack_require__("../../../../../src/app/categories/category.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__registration_service__ = __webpack_require__("../../../../../src/app/competitions/registration.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var RegistrationEditComponent = (function () {
+    // Constructor function
+    // @param service : competition service
+    // @param router : router service
+    // @param activated_route : Activated router service
+    function RegistrationEditComponent(service, category_service, router, activated_route) {
+        this.service = service;
+        this.category_service = category_service;
+        this.router = router;
+        this.activated_route = activated_route;
+    }
+    // Ng on init function of initialization
+    // @params none
+    // @returns none
+    RegistrationEditComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activated_route.params.subscribe(function (params) {
+            var id = params['id'];
+            _this.getRegistration(id);
+        });
+        this.setSexes();
+        this.getAllCategories();
+    };
+    // update registration
+    // updates with the normal values the registration
+    // @params none
+    // @returns none
+    RegistrationEditComponent.prototype.update = function () {
+        var _this = this;
+        var reg = {
+            id: this.registration._id,
+            first_name: this.registration.first_name,
+            last_name: this.registration.last_name,
+            team: this.registration.team,
+            bio: this.registration.bio,
+            competitor_number: this.registration.competitor_number
+        };
+        this.service.update(reg)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (!response.error) {
+                _this.router.navigateByUrl("/competitions/detail/" + _this.registration.competition._id);
+            }
+            else {
+                _this.errors = response.message;
+            }
+        });
+    };
+    RegistrationEditComponent.prototype.disqualified = function () {
+        var _this = this;
+        var reg = {
+            id: this.registration._id,
+            disqualified: true
+        };
+        this.service.update(reg)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (!response.error) {
+                _this.router.navigateByUrl("/competitions/detail/" + _this.registration.competition._id);
+            }
+            else {
+                _this.errors = response.message;
+            }
+        });
+    };
+    // Get registration 
+    // Get the registration by id
+    // @param id : the register id
+    // @returns none
+    RegistrationEditComponent.prototype.getRegistration = function (id) {
+        var _this = this;
+        this.service.detail(id)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (!response.error) {
+                _this.registration = response.data;
+            }
+        });
+    };
+    // Get all the categories
+    // @params none
+    // @returns none
+    RegistrationEditComponent.prototype.getAllCategories = function () {
+        var _this = this;
+        this.category_service.getAll()
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (response.error) {
+                console.log(response.message);
+            }
+            else {
+                _this.categories = response.data;
+            }
+        });
+    };
+    // Set sexes, inits the sexes array
+    // @params none
+    // @returns none
+    RegistrationEditComponent.prototype.setSexes = function () {
+        this.sexes = [
+            { id: 1, value: 1, name: 'Male' },
+            { id: 2, value: 2, name: 'Female' }
+        ];
+    };
+    // Category select trigger
+    // This is when the sex or age changes of value then the categories get filtered 
+    // @params none
+    // @returns none
+    RegistrationEditComponent.prototype.selectCategoryTriggerChange = function () {
+        var _this = this;
+        if (this.registration.age > 0 && this.registration.sex.id > 0) {
+            this.categories_cb = this.categories.filter(function (c) { return c.age_1 <= _this.registration.age && c.age_2 >= _this.registration.age && (_this.registration.sex.value - 1) == c.sex; });
+        }
+        else {
+            this.categories_cb = [];
+        }
+    };
+    // Validates register form
+    // This is because am a shitty programer
+    // @params register : a register 
+    // @returns Boolean - if valid
+    RegistrationEditComponent.prototype.validateRegister = function (register) {
+        return (register.age > 0
+            && register.sex.id > 0
+            && register.first_name != ""
+            && register.last_name != ""
+            && register.category);
+    };
+    return RegistrationEditComponent;
+}());
+RegistrationEditComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'registration-edit',
+        template: __webpack_require__("../../../../../src/app/competitions/competitions.registration.edit.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__registration_service__["a" /* RegistrationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__registration_service__["a" /* RegistrationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__categories_category_service__["a" /* CategoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__categories_category_service__["a" /* CategoryService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */]) === "function" && _d || Object])
+], RegistrationEditComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=competitions.registration.edit.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/competitions/competitions.results.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions']\">Competitions</a>\n        </li>\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions/detail', competition._id]\">{{competition.name}} [detail]</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Results</li>\n    </ol>\n</nav>\n    \n<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-12\" *ngIf=\"competition && competition.competition_type.value == 1 && calc_done\">\n        <table class=\"table table-sm table-hover table-bordered table-responsive\">\n            <thead>\n                <tr>\n                    <th colspan=\"3\"></th>\n                    <th colspan=\"3\" class=\"table-info\">Day 1</th>\n                    <th class=\"table-danger\">Day 2</th>\n                    <th class=\"table-success\">Day 3</th>\n                    <th colspan=\"4\">Totals</th>\n                </tr>\n                <tr>\n                    <th>#</th>\n                    <th>Name</th>\n                    <th>Category</th>\n                    <th class=\"table-info\">\n                        Natación\n                    </th>\n                    <th class=\"table-info\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-info\">\n                        Total\n                    </th>\n                    <th class=\"table-danger\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-success\">\n                        Carrera\n                    </th>\n                    <th>\n                        <i class=\"fa fa-tint\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-bicycle\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-road\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>Global</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations\">\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td>{{reg.category.name}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.totals[1]}}</td>\n                    <td>{{reg.total_day_1}}</td>\n                    <td>{{reg.totals[2]}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.total_cycling}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
+module.exports = "<nav aria-label=\"breadcrumb\" role=\"navigation\" *ngIf=\"competition\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions']\">Competitions</a>\n        </li>\n        <li class=\"breadcrumb-item\" aria-current=\"page\">\n            <a [routerLink]=\"['/competitions/detail', competition._id]\">{{competition.name}} [detail]</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Results</li>\n    </ol>\n</nav>\n    \n<h2>{{title}}</h2>\n<hr>\n<div class=\"row\">\n    <div class=\"col-md-12\" *ngIf=\"competition && competition.competition_type.value == 1 && calc_done\">\n        <table class=\"table table-sm table-hover table-bordered table-responsive\">\n            <thead>\n                <tr>\n                    <th colspan=\"4\"></th>\n                    <th colspan=\"3\" class=\"table-info\">Day 1</th>\n                    <th class=\"table-danger\">Day 2</th>\n                    <th class=\"table-success\">Day 3</th>\n                    <th colspan=\"4\">Totals</th>\n                </tr>\n                <tr>\n                    <th>#</th>\n                    <th>No.</th>\n                    <th>Name</th>\n                    <th>Category</th>\n                    <th class=\"table-info\">\n                        Natación\n                    </th>\n                    <th class=\"table-info\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-info\">\n                        Total\n                    </th>\n                    <th class=\"table-danger\">\n                        Ciclismo\n                    </th>\n                    <th class=\"table-success\">\n                        Carrera\n                    </th>\n                    <th>\n                        <i class=\"fa fa-tint\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-bicycle\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>\n                        <i class=\"fa fa-road\" aria-hidden=\"true\"></i>\n                    </th>\n                    <th>Global</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let reg of registrations; let i = index\">\n                    <td>{{i+1}}</td>\n                    <td>{{reg.competitor_number}}</td>\n                    <td>{{reg.first_name}} {{reg.last_name}}</td>\n                    <td>{{reg.category.name}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.totals[1]}}</td>\n                    <td>{{reg.total_day_1}}</td>\n                    <td>{{reg.totals[2]}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.totals[0]}}</td>\n                    <td>{{reg.total_cycling}}</td>\n                    <td>{{reg.totals[3]}}</td>\n                    <td>{{reg.total}}</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1773,7 +2366,7 @@ var CompetitionsResultsComponent = (function () {
         this.registration_service.getAllByCompetitionId(id)
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
-            _this.registrations = response.data;
+            _this.registrations = response.data.filter(function (r) { return r.disqualified == false; });
             _this.registrations.forEach(function (r) { return r.original_rounds = r.rounds; });
             _this.calculateResults();
             if (_this.competition.competition_type.value == 1) {
@@ -2133,19 +2726,19 @@ var RegistrationService = (function () {
     // @params data : a registration
     // @returns Observable response
     RegistrationService.prototype.update = function (data) {
-        return this.http_service.put("/api/registration/" + data.id, data);
+        return this.http_service.put("/api/competitor/" + data.id, data);
     };
     // find by id registration
     // @params id : number
     // @returns Observable response
     RegistrationService.prototype.detail = function (id) {
-        return this.http_service.get("/api/registration/" + id);
+        return this.http_service.get("/api/competitor/" + id);
     };
     // delete by id registration
     // @params id : number
     // @returns Observable response
     RegistrationService.prototype.delete = function (id) {
-        return this.http_service.delete("/api/registration/" + id);
+        return this.http_service.delete("/api/competitor/" + id);
     };
     // This will save all the rounds of the registration
     // They are obviously filtered by satage
@@ -2169,7 +2762,7 @@ var _a;
 /***/ "../../../../../src/app/menu/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-inverse fixed-top custom_navbar\">\n    <button class=\"navbar-toggler navbar-toggler-right hidden-lg-up\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\n        aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n    <a class=\"navbar-brand\" href=\"/\">Race Control System</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/settings']\">Settings</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['/help']\">Help</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"\" (click)=\"logout()\">Logout</a>\n            </li>\n        </ul>\n        <form class=\"form-inline mt-2 mt-md-0\">\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n        </form>\n    </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-inverse fixed-top custom_navbar\">\n    <button class=\"navbar-toggler navbar-toggler-right hidden-lg-up\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\n        aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n    <a class=\"navbar-brand\" [routerLink]=\"['/']\">Race Control System [v0.1]</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"\" (click)=\"logout()\">Logout</a>\n            </li>\n        </ul>\n        <form class=\"form-inline mt-2 mt-md-0\">\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n        </form>\n    </div>\n</nav>"
 
 /***/ }),
 
@@ -2229,7 +2822,7 @@ var _a, _b;
 /***/ "../../../../../src/app/menu/sidebar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar\">\n    <ul class=\"nav nav-pills flex-column\">\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"['/']\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Overview</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"['/competitions']\"><i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i> Competitions</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"['/categories']\"><i class=\"fa fa-cubes\" aria-hidden=\"true\"></i> Categories</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"['/reports']\"><i class=\"fa fa-pie-chart\" aria-hidden=\"true\"></i> Reports</a>\n        </li>\n    </ul>\n</nav>"
+module.exports = "<nav class=\"col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar\">\n    <ul class=\"nav nav-pills flex-column\">\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"['/']\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Overview</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"['/competitions']\"><i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i> Competitions</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"['/categories']\"><i class=\"fa fa-cubes\" aria-hidden=\"true\"></i> Categories</a>\n        </li>\n    </ul>\n</nav>"
 
 /***/ }),
 

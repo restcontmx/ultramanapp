@@ -42,4 +42,16 @@ export class AuthService {
     logout = () => {
         localStorage.removeItem( "user_info" )
     }
+
+    // is machinne setted
+    // this will validate that this machinne is setted on the database
+    // @param none
+    // @return none
+    isMachinneSetted() : Observable<Response> {
+        return this.http_service.get( '/api/auth/issetted' )
+    }
+
+    register( data ) : Observable<Response> {
+        return this.http_service.post( '/api/auth/register', data )
+    }
 }

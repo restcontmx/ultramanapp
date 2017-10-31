@@ -71,7 +71,7 @@ export class CompetitionsResultsComponent implements OnInit, OnDestroy {
         this.registration_service.getAllByCompetitionId( id )
             .map( res => res.json() )
             .subscribe( ( response ) => {
-                this.registrations = response.data
+                this.registrations = response.data.filter( r => r.disqualified == false )
                 this.registrations.forEach( r => r.original_rounds = r.rounds )
                 this.calculateResults()
                 if( this.competition.competition_type.value == 1 ) {

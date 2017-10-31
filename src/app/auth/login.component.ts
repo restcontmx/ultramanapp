@@ -32,7 +32,8 @@ export class LoginComponent {
                 .map( res => res.json() )
                 .subscribe( ( response ) => {
                     if( !response.error ) {
-                        localStorage.setItem( "user_info", response.data )
+                        console.log( response.data )
+                        localStorage.setItem( "user_info", JSON.stringify( response.data ) )
                         this.router.navigateByUrl( '/' );
                     } else {
                         this.errors = response.message

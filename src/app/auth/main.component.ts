@@ -18,6 +18,7 @@ export class MainComponent implements OnInit, OnDestroy {
     public active_competitions : Array<any>
     public subscription : Subscription
     public timer
+    public user_info
 
     // Constructor function
     // @param auth_service : authentication service
@@ -34,6 +35,7 @@ export class MainComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         this.timer = TimerObservable.create( 2000, 1000 )
         this.getCompetitions()
+        this.user_info = JSON.parse( localStorage.getItem( 'user_info' ) )
     }
 
     // Ng on destroy

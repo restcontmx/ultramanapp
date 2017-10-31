@@ -213,7 +213,7 @@ router.put( '/starttimes', jsonParser, function( req, res ) {
     if( req.error ) {
         res.send (JSON.stringify({
             error : true,
-            message : error
+            message : req.error
         }))
         res.end()
     }
@@ -228,7 +228,7 @@ router.put( '/starttimes', jsonParser, function( req, res ) {
         if( err ) {
             res.send (JSON.stringify({
                 error : true,
-                message : error
+                message : err
             }))
             res.end()
         } else {

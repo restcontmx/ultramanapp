@@ -14,7 +14,7 @@ router.get( '/', jsonParser, function( req, res ) {
     if( req.error ) {
         res.send (JSON.stringify({
             error : true,
-            message : error
+            message : req.error
         }))
         res.end()
     }
@@ -22,7 +22,7 @@ router.get( '/', jsonParser, function( req, res ) {
         if ( err ) {
             res.send (JSON.stringify({
                 error : true,
-                message : error
+                message : err
             }))
             res.end()
         } else {
@@ -42,7 +42,7 @@ router.post( '/', jsonParser, function( req, res ) {
     if( req.error ) {
         res.send (JSON.stringify({
             error : true,
-            message : error
+            message : req.error
         }))
         res.end()
     }
@@ -50,7 +50,7 @@ router.post( '/', jsonParser, function( req, res ) {
         if( err ) {
             res.send (JSON.stringify({
                 error : true,
-                message : error
+                message : err
             }))
             res.end()
         } else {
@@ -70,7 +70,7 @@ router.get( '/:id', jsonParser, function( req, res ) {
     if( req.error ) {
         res.send (JSON.stringify({
             error : true,
-            message : error
+            message : req.error
         }))
         res.end()
     }
@@ -78,7 +78,7 @@ router.get( '/:id', jsonParser, function( req, res ) {
         if( err ) {
             res.send (JSON.stringify({
                 error : true,
-                message : error
+                message : err
             }))
             res.end()
         } else {
@@ -98,7 +98,7 @@ router.put( '/:id', jsonParser, function( req, res ) {
     if( req.error ) {
         res.send (JSON.stringify({
             error : true,
-            message : error
+            message : req.error
         }))
         res.end()
     }
@@ -106,7 +106,7 @@ router.put( '/:id', jsonParser, function( req, res ) {
         if( err ) {
             res.send (JSON.stringify({
                 error : true,
-                message : error
+                message : err
             }))
             res.end()
         } else {
@@ -126,7 +126,7 @@ router.delete( '/:id', jsonParser, function( req, res ) {
     if( req.error ) {
         res.send (JSON.stringify({
             error : true,
-            message : error
+            message : req.error
         }))
         res.end()
     }
@@ -134,7 +134,7 @@ router.delete( '/:id', jsonParser, function( req, res ) {
         if( err ) {
             res.send (JSON.stringify({
                 error : true,
-                message : error
+                message : err
             }))
             res.end()
         } else {

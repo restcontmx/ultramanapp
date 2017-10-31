@@ -20,7 +20,6 @@
                 <h4 *ngIf="!competition.isOn">Not Running</h4>
                 <h4 *ngIf="competition.isOn">On Course</h4>
                 <p>
-                    <button type="button" class="btn btn-warning" [routerLink]="['/competitions/edit', competition._id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
                     <button type="button" class="btn btn-primary" [routerLink]="['/competitions/registration', competition._id]"><i class="fa fa-address-card-o" aria-hidden="true"></i> Register</button>
                     <button type="button" class="btn btn-info" [routerLink]="['/competitions/results', competition._id]"><i class="fa fa-list-ol" aria-hidden="true"></i> Results</button>
                 </p>
@@ -97,13 +96,13 @@
             <tbody>
                 <tr *ngFor="let registration of registrations">
                     <td>{{registration.competitor_number}}</td>
-                    <td>{{registration.first_name}} {{registration.last_name}}</td>
+                    <td><a [routerLink]="['/competitions/registration/detail', registration._id ]">{{registration.first_name}} {{registration.last_name}}</a></td>
                     <td>{{registration.team}}</td>
                     <td>{{registration.category.name}}</td>
                     <td>{{registration.age}}</td>
                     <td>{{registration.sex == 0 ? 'Male' : 'Female' }}</td>
                     <td>
-                        <a href="" [routerLink]="['/registration/detail/', registration._id ]">
+                        <a href="" [routerLink]="['/competitions/registration/edit', registration._id ]">
                             <button class="btn btn-block btn-warning">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </button>

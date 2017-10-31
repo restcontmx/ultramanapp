@@ -17,7 +17,7 @@
         <table class="table table-sm table-hover table-bordered table-responsive">
             <thead>
                 <tr>
-                    <th colspan="3"></th>
+                    <th colspan="4"></th>
                     <th colspan="3" class="table-info">Day 1</th>
                     <th class="table-danger">Day 2</th>
                     <th class="table-success">Day 3</th>
@@ -25,6 +25,7 @@
                 </tr>
                 <tr>
                     <th>#</th>
+                    <th>No.</th>
                     <th>Name</th>
                     <th>Category</th>
                     <th class="table-info">
@@ -55,7 +56,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let reg of registrations">
+                <tr *ngFor="let reg of registrations; let i = index">
+                    <td>{{i+1}}</td>
                     <td>{{reg.competitor_number}}</td>
                     <td>{{reg.first_name}} {{reg.last_name}}</td>
                     <td>{{reg.category.name}}</td>

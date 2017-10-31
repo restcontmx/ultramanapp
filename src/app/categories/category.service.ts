@@ -34,7 +34,7 @@ export class CategoryService {
     // @params data : a category
     // @returns Observable response
     update( data ) : Observable<Response> {
-        return this.http_service.put( `/api/category/${data.id}`, data )
+        return this.http_service.put( `/api/category/${data._id}`, data )
     }
 
     // find by id category
@@ -42,5 +42,9 @@ export class CategoryService {
     // @returns Observable response
     detail( id ) : Observable<Response> {
         return this.http_service.get( `/api/category/${id}` )
+    }
+
+    delete( id ) : Observable<Response> {
+        return this.http_service.delete( `/api/category/${id}` )
     }
 }

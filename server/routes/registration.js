@@ -24,7 +24,7 @@ router.get( '', jsonParser, function( req, res ) {
             if ( err ) {
                 res.send (JSON.stringify({
                     error : true,
-                    message : error
+                    message : err
                 }))
                 res.end()
             } else {
@@ -36,6 +36,7 @@ router.get( '', jsonParser, function( req, res ) {
             }
         });
 })
+
 
 // Add registration
 router.post( '/', jsonParser, function( req, res ) {

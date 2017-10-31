@@ -1,15 +1,15 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component } from '@angular/core'
 import { OnInit } from '@angular/core'
-import { RegistrationService } from './registration.service'
+import { CategoryService } from './category.service'
 
 @Component({
-    selector : 'competitions-registration-detail',
-    templateUrl : 'competitions.registration.detail.component.html'
+    selector : 'categories-detail',
+    templateUrl : 'categories.detail.component.html'
 })
-export class RegistrationDetailComponent implements OnInit {
+export class CategoriesDetailComponent implements OnInit {
     
-    public register
+    public category
     public delete_name : String
     public errors : String
     public messages : String
@@ -18,7 +18,7 @@ export class RegistrationDetailComponent implements OnInit {
     // @param service : competition service
     // @param router : router service
     // @param activated_route : Activated router service
-    constructor(    private service:RegistrationService,
+    constructor(    private service:CategoryService,
                     private router:Router,
                     private activated_route:ActivatedRoute ) {
     }
@@ -29,32 +29,45 @@ export class RegistrationDetailComponent implements OnInit {
     ngOnInit() : void {
         this.activated_route.params.subscribe( params => {
             let id = params['id']
-            this.getRegister( id )
+            this.getCategory( id )
         })
     }
 
-    // Get register
+    // Get category
     // @params id : competition id string
     // @returns none
-    getRegister( id ) : void {
+    getCategory( id ) : void {
         this.service.detail( id )
             .map( res => res.json() )
             .subscribe( response => {
                 if( response.error ) {
-                    this.errors = "There was an error getting the register"
+                    console.log( "There was an error getting the category" )
                 } else {
-                    this.register = response.data
+                    this.category = response.data
+                }
+            })
+    }
+
+    update() : void {
+        console.log( this.category )
+        this.service.update( this.category )
+            .map( res => res.json() )
+            .subscribe( response => {
+                if( !response.error ) {
+                    this.messages = "Object updated."
+                } else {
+                    this.errors = "There was an error updating the object."
                 }
             })
     }
 
     delete() : void {
-        if( this.delete_name == ( this.register.first_name + ' ' + this.register.last_name ) ) {
-            this.service.delete( this.register._id )
+        if( this.delete_name == this.category.name ) {
+            this.service.delete( this.category._id )
                 .map( res => res.json() )
                 .subscribe( response => {
                     if( !response.error ) {
-                        this.router.navigateByUrl( '/competitions/detail/' + this.register.competition._id ) 
+                        this.router.navigateByUrl( '/categories' ) 
                     } else {
                         this.errors = "There was an error deleting the object."
                     }

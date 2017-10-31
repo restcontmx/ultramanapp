@@ -14,7 +14,9 @@ import { NavBarComponent } from './menu/navbar.component'
 import { SideBarComponent } from './menu/sidebar.component'
 
 import { LoginComponent } from './auth/login.component'
+import { SetupComponent } from './auth/setup.component'
 import { AlwaysAuthGuard } from './auth/alwaysonwarth.service'
+import { IsSetted } from './auth/issetted.service'
 import { AuthService } from './auth/auth.service'
 
 import { CompetitionService } from './competitions/competition.service'
@@ -23,6 +25,8 @@ import { CompetitionsListComponent } from './competitions/competitions.list.comp
 import { CompetitionsNewComponent } from './competitions/competitions.new.component'
 import { CompetitionsDetailComponent } from './competitions/competitions.detail.component'
 import { CompetitionsRegistrationComponent } from './competitions/competition.registration.component'
+import { RegistrationDetailComponent } from './competitions/competitions.registration.detail.component'
+import { RegistrationEditComponent } from './competitions/competitions.registration.edit.component'
 import { CompetitionsResultsComponent } from './competitions/competitions.results.component'
 import { CompetitionsStageComponent } from './competitions/competitions.stage.component'
 
@@ -30,6 +34,7 @@ import { CategoryService } from './categories/category.service'
 import { CategoriesComponent } from './categories/categories.component'
 import { CategoriesListComponent } from './categories/categories.list.component'
 import { CategoriesNewComponent } from './categories/categories.new.component'
+import { CategoriesDetailComponent } from './categories/categories.detail.component'
 
 import { CompetitionTypeService } from './competition_types/competition_types.service'
 import { RegistrationService } from './competitions/registration.service'
@@ -42,7 +47,13 @@ import { DateTimePickerModule } from 'ng-pick-datetime'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
-    { path: 'login', component: LoginComponent },
+    {   path: 'setup', 
+        component: SetupComponent
+    },
+    {   path: 'login', 
+        component: LoginComponent,
+        canActivate: [ IsSetted ]
+    },
     { 
         path: '', component: DashboardComponent,
         canActivate: [ AlwaysAuthGuard ],
@@ -61,6 +72,8 @@ const appRoutes: Routes = [
                     { path: 'stage/:id', component : CompetitionsDetailComponent },
                     { path: 'stage/:id', component : CompetitionsDetailComponent },
                     { path: 'registration/:id', component : CompetitionsRegistrationComponent },
+                    { path: 'registration/detail/:id', component : RegistrationDetailComponent },
+                    { path: 'registration/edit/:id', component : RegistrationEditComponent },
                     { path: 'results/:id', component : CompetitionsResultsComponent },
                     { path: 'stage/:id/:stageId', component : CompetitionsStageComponent }
                 ]
@@ -69,8 +82,9 @@ const appRoutes: Routes = [
                 path: 'categories',
                 component: CategoriesComponent,
                 children : [
-                    {  path: '', component : CategoriesListComponent },
-                    {  path: 'new', component : CategoriesNewComponent }
+                    { path: '', component : CategoriesListComponent },
+                    { path: 'new', component : CategoriesNewComponent },
+                    { path: 'detail/:id', component : CategoriesDetailComponent }                    
                 ]
             },
             {
@@ -89,6 +103,7 @@ const appRoutes: Routes = [
         SideBarComponent,
         DashboardComponent,
         LoginComponent,
+        SetupComponent,
         CompetitionsComponent,
         CompetitionsListComponent,
         CompetitionsNewComponent,
@@ -96,7 +111,10 @@ const appRoutes: Routes = [
         CategoriesComponent,
         CategoriesListComponent,
         CategoriesNewComponent,
+        CategoriesDetailComponent,
         CompetitionsRegistrationComponent,
+        RegistrationDetailComponent,
+        RegistrationEditComponent,
         CompetitionsResultsComponent,
         CompetitionsStageComponent,
         MainComponent,
@@ -117,6 +135,7 @@ const appRoutes: Routes = [
         AuthService,
         CookieService,
         AlwaysAuthGuard,
+        IsSetted,
         CompetitionService,
         CompetitionTypeService,
         CategoryService,

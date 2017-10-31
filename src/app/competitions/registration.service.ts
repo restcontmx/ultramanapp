@@ -40,21 +40,21 @@ export class RegistrationService {
     // @params data : a registration
     // @returns Observable response
     update( data ) : Observable<Response> {
-        return this.http_service.put( `/api/registration/${data.id}`, data )
+        return this.http_service.put( `/api/competitor/${data.id}`, data )
     }
 
     // find by id registration
     // @params id : number
     // @returns Observable response
     detail( id ) : Observable<Response> {
-        return this.http_service.get( `/api/registration/${id}` )
+        return this.http_service.get( `/api/competitor/${id}` )
     }
 
      // delete by id registration
     // @params id : number
     // @returns Observable response
     delete( id ) : Observable<Response> {
-        return this.http_service.delete( `/api/registration/${id}` )
+        return this.http_service.delete( `/api/competitor/${id}` )
     }
 
     // This will save all the rounds of the registration

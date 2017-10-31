@@ -1,0 +1,56 @@
+<nav aria-label="breadcrumb" role="navigation" *ngIf="register">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="['/competitions/detail', register.competition._id ]">Competition</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{register.first_name}} [detail]</li>
+    </ol>
+</nav>
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert" *ngIf="errors">
+            {{errors}}
+        </div>
+        <div class="alert alert-warning" role="alert" *ngIf="messages">
+            {{messages}}
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="register">
+    <div class="col-md-6">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b>Number : </b> {{register.competitor_number}}</li>
+            <li class="list-group-item">
+                <b>Name : </b> {{register.first_name}} {{register.last_name}}</li>
+            <li class="list-group-item">
+                <b>Category : </b> {{register.category.name}}</li>
+            <li class="list-group-item">
+                <b>Age : </b> {{register.age}}</li>
+            <li class="list-group-item">
+                <b>Sex : </b> {{register.sex == 0 ? 'MALE' : 'FEMALE'}}</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+
+    <div class="col-md-6">
+        <button [routerLink]="['/competitions/detail', register.competition._id]" class="btn btn-block btn-default">
+            <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Cancel</button>
+    </div>
+
+    <div class="col-md-12">
+        <br>
+        <br>
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Danger Zone!</h4>
+            <p>If you remove this you may have a problem with your list of reports.</p>
+            <hr>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Write Competitors Name" [(ngModel)]="delete_name">
+            </div>
+            <button class="btn btn-block btn-danger" (click)="delete()">Delete</button>
+        </div>
+    </div>
+</div>
