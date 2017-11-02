@@ -1,3 +1,4 @@
+const mongodb     = require( './mongodb' )
 var express       = require( 'express' ),
     path          = require( 'path' ),
     favicon       = require( 'serve-favicon' ),
@@ -20,8 +21,8 @@ const start_time = require( './server/routes/start_time' )
 const auth = require( './server/routes/auth' )
 const competitor = require( './server/routes/competitor' )
 
-mongoose.connect('mongodb://localhost:27017/racesystem');
-
+mongoose.connect('mongodb://localhost:27017/racecontrolsystem0_1');
+api.use( bodyParser( { limit: '50mb' } ) );
 api.use( bodyParser.json() );
 api.use( bodyParser.urlencoded( { extended: false } ) );
 api.use( cookieParser() );

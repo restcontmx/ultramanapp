@@ -22,6 +22,9 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
     public rounds: Array<Number> = []
     public stage_id 
     public start_time
+    public errors : String = ""
+    public messages : String = ""
+    public successes : String = ""
 
     // constructor
     // @params service: competition service
@@ -61,7 +64,7 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
             .map( res => res.json() )
             .subscribe( response => {
                 if( response.error ) {
-                    console.log( response.message )
+                    this.errors= response.message
                 } else {
                     this.competition = response.data
                     this.stage = this.competition.stages.filter( s => s._id == stage_id )[0]
@@ -82,7 +85,7 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
             .map( res => res.json() )
             .subscribe( response => {
                 if( response.error ) {
-                    console.log( response.message )
+                    this.errors = response.message
                 } else {
                     this.start_time = response.data
                     this.getAllRegistrations( )
@@ -98,11 +101,12 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
             .map( res => res.json() )
             .subscribe( response => {
                 if( !response.error ) {
+                    console.log( response.data )
                     this.registrations = response.data
                     this.registrations.forEach( r => r.original_rounds = r.rounds )
                     this.calculateResults()
                 } else {
-                    console.log( "There was an error getting the results." )
+                    this.errors = "There was an error getting the results."
                 }
             })
     }
@@ -114,8 +118,12 @@ export class CompetitionsStageComponent implements OnInit, OnDestroy {
         this.registration_service.saveRounds( this.registrations )
             .map( res => res.json() )
             .subscribe( response => {
-                console.log( `This was saved on registration; Server says ${response.message}.` )
-                this.getAllRegistrations()
+                if( response.error ) {
+                    this.errors = `This was saved on registration; ${response.message}.`
+                } else {
+                    this.getAllRegistrations()
+                    this.successes = "Round saved!"
+                }
             })
     }
 

@@ -10,70 +10,68 @@
     </ol>
 </nav>
 
-<form (ngSubmit)="register()">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="first_name">First Name</label>
-                <input type="text" class="form-control" name="first_name" placeholder="First Name" required autofocus [(ngModel)]="registration.first_name">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="last_name">Last Name</label>
-                <input type="text" class="form-control" name="last_name" placeholder="Last Name" required autofocus [(ngModel)]="registration.last_name">
-            </div>
-        </div>
-
-        <div class="col-md-12">
-            <div class="form-group">
-                <label for="bio">Bio.</label>
-                <textarea type="text" class="form-control" name="bio" placeholder="Bio." required autofocus [(ngModel)]="registration.bio"></textarea>
-            </div>
-        </div>
-
-        <div class="col-md-12">
-            <div class="form-group">
-                <label for="team">Team</label>
-                <input type="text" class="form-control" name="team" placeholder="Team" required autofocus [(ngModel)]="registration.team">
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="age">Age</label>
-                <input type="number" class="form-control" name="age" placeholder="Number" required autofocus [(ngModel)]="registration.age"
-                    (ngModelChange)="selectCategoryTriggerChange()">
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="sex">Sex</label>
-                <select name="sex" class="form-control" required [(ngModel)]="registration.sex" (ngModelChange)="selectCategoryTriggerChange()">
-                    <option *ngFor="let s of sexes" [ngValue]="s">{{s.name}}</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select name="category" class="form-control" required [(ngModel)]="registration.category">
-                    <option *ngFor="let c of categories_cb" [ngValue]="c">{{c.name}} {{c.age_1}}-{{c.age_2}} años {{c.sex == 0 ?'MALE':'FEMALE'}}</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <button [routerLink]="['/competitions']" class="btn btn-block btn-default">
-                <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Cancel</button>
-        </div>
-
-        <div class="col-md-6">
-            <button type="submit" class="btn btn-block btn-primary">
-                <i class="fa fa-upload" aria-hidden="true"></i> Submit</button>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" name="first_name" placeholder="First Name" required autofocus [(ngModel)]="registration.first_name">
         </div>
     </div>
-</form>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" name="last_name" placeholder="Last Name" required autofocus [(ngModel)]="registration.last_name">
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="bio">Bio.</label>
+            <textarea type="text" class="form-control" name="bio" placeholder="Bio." required autofocus [(ngModel)]="registration.bio"></textarea>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="team">Team</label>
+            <input type="text" class="form-control" name="team" placeholder="Team" required autofocus [(ngModel)]="registration.team">
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" name="age" placeholder="Number" required autofocus [(ngModel)]="registration.age"
+                (ngModelChange)="selectCategoryTriggerChange()">
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="sex">Sex</label>
+            <select name="sex" class="form-control" required [(ngModel)]="registration.sex" (ngModelChange)="selectCategoryTriggerChange()">
+                <option *ngFor="let s of sexes" [ngValue]="s">{{s.name}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select name="category" class="form-control" required [(ngModel)]="registration.category">
+                <option *ngFor="let c of categories_cb" [ngValue]="c">{{c.name}} {{c.age_1}}-{{c.age_2}} años {{c.sex == 0 ?'MALE':'FEMALE'}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <button [routerLink]="['/competitions']" class="btn btn-block btn-default">
+            <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Cancel</button>
+    </div>
+
+    <div class="col-md-6">
+        <button type="button" class="btn btn-block btn-primary" (click)="register()">
+            <i class="fa fa-upload" aria-hidden="true" ></i> Submit</button>
+    </div>
+</div>

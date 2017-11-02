@@ -2,12 +2,12 @@
   "name": "ultraman-app",
   "description": "Ultra man administration app.",
   "author": "Ramiro Gutierrez Alaniz",
-  "version": "0.9.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "main.js",
   "scripts": {
     "ng": "ng",
-    "start": "node mongodb & ng build && electron main",
+    "start": "npm install && ng build && electron main",
     "pack": "build --dir",
     "dist": "build"
   },
@@ -54,10 +54,12 @@
     "file-saver": "^1.3.3",
     "getmac": "^1.2.1",
     "moment": "^2.18.1",
+    "mongod": "^2.0.0",
     "mongoose": "^4.12.1",
     "morgan": "^1.9.0",
     "ng-pick-datetime": "^5.0.0-beta.9",
     "ngx-cookie-service": "^1.0.9",
+    "request": "^2.83.0",
     "rxjs": "^5.4.2",
     "serve-favicon": "^2.4.5",
     "zone.js": "^0.8.14"

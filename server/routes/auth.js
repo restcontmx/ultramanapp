@@ -11,7 +11,7 @@ var CompetitionType = require( '../models/competition_type' )
 
 var g_opts = {
     hostname : 'balpres-be-gunt2raro.c9users.io',
-    api_uri : 'https://racecontrolapi-gunt2raro.c9users.io/api/',
+    api_uri : 'https://race-control-app.herokuapp.com/api/',
     port : '8080',
     token : 'UkFDRUFQUDpCPCUhL341eW1aQ0Jrejdl'
 };

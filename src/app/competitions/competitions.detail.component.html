@@ -90,7 +90,6 @@
                     <th>Age</th>
                     <th>Sex</th>
                     <th>Edit</th>
-                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -105,13 +104,6 @@
                         <a href="" [routerLink]="['/competitions/registration/edit', registration._id ]">
                             <button class="btn btn-block btn-warning">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            </button>
-                        </a>
-                    </td>
-                    <td>
-                        <a (click)="delete( registration._id )">
-                            <button class="btn btn-block btn-danger">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
                         </a>
                     </td>

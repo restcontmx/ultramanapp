@@ -10,6 +10,23 @@
     </ol>
 </nav>
 
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert" *ngIf="errors">
+            {{errors}}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="alert alert-warning" role="alert" *ngIf="messages">
+            {{messages}}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="alert alert-success" role="alert" *ngIf="successes">
+            {{successes}}
+        </div>
+    </div>
+</div>
 <h2>{{title}}</h2>
 <div class="row"  *ngIf="competition">
     <div class="col-md-12">
